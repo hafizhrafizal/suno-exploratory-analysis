@@ -1,0 +1,1171 @@
+[2023-06-01 03:29:27] 1053567085738987590: hello world, my name is Suno
+[2023-06-01 05:13:18] 425584694835281920: heelo can i use for youtube voice over
+[2023-06-01 13:00:21] 1071214900648615976: #💬┃general-suno  i’m not able to figure out how to access jonathan’s UI but it’s just because i have no idea what i’m doing lmao 
+this seems like it should be simple
+[2023-06-01 13:11:09] 892586678441639937: I would like to know the Bark training process, code, and dataset. Are these publicly available to others. I hope to achieve real-time input to output, just like humans do
+[2023-06-01 13:53:35] 614946962139250711: It should be, but I did not explain the final step. A gradio app is a website. On the screen you will see a message like "Running on local URL:  http://127.0.0.1:7860"
+[2023-06-01 13:53:54] 614946962139250711: You can go to that address, or click the text (maybe control click)
+[2023-06-01 14:47:08] 402805485364969473: hi, how can i use this for long (eg audiobook long) texts?\
+[2023-06-01 14:50:18] 1113523992188440686: Hey everyone, new here. I have a quick but crucial question, is the bark models also under MIT license or just the code in Github?
+[2023-06-01 15:44:30] 1075439648702201918: https://github.com/suno-ai/bark/blob/main/LICENSE
+[2023-06-01 16:53:00] 108757216114266112: Just curious, how does google soundstorm compare to suno (bark)
+[2023-06-01 19:32:20] 354223946414948353: i would buy a used 3090
+[2023-06-01 19:32:24] 354223946414948353: (i did that)
+[2023-06-01 19:48:23] 393504486351568896: unfortunately, people in my region are crazy, charging only 10% less than original price. And the ones i find on another platform are so cheap that i think they are scams, bc they only ship ^^ Eg one for 150€ or a new 4080 for 400€ 😂
+[2023-06-01 19:53:11] 614946962139250711: Used 3090s are great value for AI, if you can use the memory and don't mind the risk of buying used. I may buy a second one myself.
+[2023-06-01 19:54:16] 393504486351568896: isn't the whole 30 series very power inefficient tho?
+[2023-06-01 19:54:35] 393504486351568896: they have like 2x8 + 1x4 pins or so iirc? 😄
+[2023-06-01 19:55:10] 614946962139250711: Just undervolt or power limit. It's 90 degrees today, I have mine set to like 60%, still only like 5% slowdown
+[2023-06-01 19:55:48] 393504486351568896: i'll see if i can find any. 4060 Ti seems to be jinxed anyway :rip:
+[2023-06-01 19:56:48] 614946962139250711: You can even go down more and it's not bad, amazingly
+[2023-06-01 19:57:38] 393504486351568896: is a 750W PSU even enough in combination with a ryzen 7 3700x? :/ I'd have enough ports on it tho
+[2023-06-01 19:58:33] 614946962139250711: Well there is an issue with power transients on some power supplies. Power limiting would be fine for even 650 or lower, but I'm not 100% it removes the transient spikes.
+[2023-06-01 19:59:04] 393504486351568896: ok i think i'll just try my luck then with it 😄
+[2023-06-01 19:59:07] 614946962139250711: I feel like for ML, it's fine. The transients tend to be things like, showing a menu in a 3D game
+[2023-06-01 19:59:22] 393504486351568896: yeh i only play on 1080p if i play
+[2023-06-01 19:59:35] 614946962139250711: A power supply is the cheap upgrade compared to a 3090
+[2023-06-01 19:59:37] 614946962139250711: in any case
+[2023-06-01 19:59:44] 393504486351568896: true that ^^
+[2023-06-01 20:00:22] 393504486351568896: what would you personally pay for a used one?
+[2023-06-01 20:00:48] 614946962139250711: I haven't followed prices lately, can't really help, not sure what's a good buy.
+[2023-06-01 20:01:08] 614946962139250711: But they were only a bit over 3080s, comparatively. Which is nuts. For games it makes sense, it's only a bit faster. But if you can use the memory great value.
+[2023-06-01 20:02:08] 393504486351568896: cheapest one i can find in my region is 600€
+[2023-06-01 20:02:18] 393504486351568896: ugly design tho imo 😄
+[2023-06-01 20:04:03] 393504486351568896: next cheapest one 750 :rip:
+[2023-06-01 20:05:36] 393504486351568896: and then you have these guys :LUL:
+[2023-06-01 20:33:33] 614946962139250711: I just made an update. You can `git pull` to get it. It defaults to automatically opening the web browser now. (Use `--no-autolaunch` to not do that.)
+[2023-06-01 21:55:46] 708852859667480608: Hey guys. Is there a way to make a new voice without cloning another one? I am thinking of a set of parameters to define how someone talks. Gender, age, pitch, speed, expressiveness, volume... stuff like that
+[2023-06-01 21:57:44] 614946962139250711: If you don't specify a voice you will get a random voice which has at least some correlation your text. For example if your text starts with, "Christ..." you'll get a higher percentage of preacher sounding voices. But you may not notice unless you run 100 samples. Still, this is a bit like a voice generator, it's just very loose right now.
+[2023-06-01 21:58:01] 614946962139250711: Likely future will be like you want, QLora, whatever
+[2023-06-01 21:59:19] 708852859667480608: And I guess you specify a voice from a premade set?
+[2023-06-01 21:59:41] 614946962139250711: You can specify any arbitrary .npz file as a voice
+[2023-06-01 21:59:47] 614946962139250711: From a random voice, a clone, or anywhere
+[2023-06-01 22:00:43] 614946962139250711: You may mean the future stuff? I think it will be like a slider for thte voices.
+[2023-06-01 22:01:23] 708852859667480608: yea I was thinking of something like that. Is it easy to create a npz file? I assume you have to train on a dataset to make a new one?
+[2023-06-01 22:02:12] 614946962139250711: I could almost hack it together with really simple tricks now, but I think it will be way better and easier when the model is in ggml or or someother format where there's tons of useful code for changing sampling already
+[2023-06-01 22:02:51] 614946962139250711: No, an NPZ is just a simple file, you just save your audio sample, and that's the npz, that'ts the new random voice
+[2023-06-01 22:03:43] 708852859667480608: I found The bark-speaker-directory on github which got me excited, but it looks like there is no central bark speaker directory? I have to run the site myself? That seemed really strange.
+[2023-06-01 22:04:05] 708852859667480608: I saw the tags and it looked like you could make a new voice and give it tags
+[2023-06-01 22:04:05] 614946962139250711: It's still early yeah, lots of stuff to do
+[2023-06-01 22:04:52] 614946962139250711: You can tag a voice, but you can't directly tell bark 'make a sad voice' like with a tag. You can try it, it might even work sometimes because Bark is taking the text tas input, but it's not a feature. They tagged those voices after the fact.
+[2023-06-01 22:06:40] 708852859667480608: I have an AI companion service that is kind of fun. Something like Replika where each companion can have all sorts of stats and it even generates a likeness
+[2023-06-01 22:07:21] 708852859667480608: I wanted to do a POC of being able to talk to the companion over the phone. The hardest part seems to be figuring out how to quickly make a unique voice based on stats
+[2023-06-01 22:07:38] 708852859667480608: I love how human Bark can sound
+[2023-06-01 22:07:59] 614946962139250711: For now you could just brute force it. Make tons of voices, tag them yourself.
+[2023-06-01 22:08:15] 614946962139250711: Not unique every time but pretty unique
+[2023-06-01 22:08:36] 708852859667480608: Then I guess try and match the stats of the companion to a pre-made voice
+[2023-06-01 22:09:15] 614946962139250711: Bark has a lot of latency, though, it's a little difficult for real time chat
+[2023-06-01 22:10:38] 708852859667480608: Is there something out there that would be better for my use?
+[2023-06-01 22:39:59] 739508218258128936: hi
+[2023-06-01 22:40:35] 739508218258128936: is bark free? Do I have to buy the licence right
+[2023-06-01 22:40:52] 739508218258128936: ı want to use youtube videos
+[2023-06-01 23:08:34] 108757216114266112: I asked this question before, believe its free
+[2023-06-02 03:52:54] 483495927085268993: Greetings guys thanks for the fantastic project. I am trying to figure out how to create voice presets using the library.
+[2023-06-02 03:55:36] 483495927085268993: based on the doc here: https://github.com/suno-ai/bark/tree/main/bark/assets/prompts it seems the audio needs to go through BERT tokenizer to get semantic_prompt, and coarse and fine prompt are the outputs of TTS pipe.
+[2023-06-02 04:00:37] 483495927085268993: is there an example notebook to create such preset?
+[2023-06-02 06:27:36] 1062712477344866355: does anyone one  use replit here
+[2023-06-02 09:02:49] 157279768683872257: @Jonathan Fly  I've been testing the webui a lot and it's just great. Thank you for all the hard work! ElevenLabs may sound better than Bark overall, but being able to run it locally with a nice webui is so cool. Also, I think Bark is a lot more fun overall.
+[2023-06-02 13:49:48] 614946962139250711: You just need good voices with Bark, and some patience, and it can be bettetr
+[2023-06-02 14:46:24] 456226577798135808: anyone knows what this is https://charactr-platform.github.io/vocos/ is it a tts synthesis or something else?
+[2023-06-02 17:40:31] 456226577798135808: this is the github page if someone is interested although the code and the weights are not here yet https://github.com/charactr-platform/vocos
+[2023-06-02 19:01:45] 635981390965374976: This isn't really voice synthesis, but I found this thing: https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI
+[2023-06-02 19:02:05] 635981390965374976: I decided to share it because it makes insanely good voice clones
+[2023-06-02 19:03:13] 635981390965374976: this is what it can do https://www.youtube.com/watch?v=NW380mwyJ-k
+[2023-06-02 20:47:00] 157279768683872257: I need to get my speaker prompt game up! I'm excited to see where this goes. I am trying to learn more AI specific Python and Pytorch stuff so maybe I can contribute at some point. It's seriously impressive to have something so good running on an older 1080 Ti.
+[2023-06-02 21:30:48] 704733206792110090: it's been implemented in my webui https://github.com/gitmylo/audio-webui
+with some extra options
+
++ some pitch extraction methods from Tiger14n's fork
++ denoising options
++ audio music splitting and recombining (you can just upload a music audio, and it will clone just the voice, put them back together, all automatically)
+[2023-06-02 21:33:22] 635981390965374976: im still in the process of training a voice with it (250 epochs with a 1.5h recording) so I haven't tried RVC from start to finish yet, but it works with normal speech right? Not just songs?
+[2023-06-02 21:33:43] 635981390965374976: the songs people are making with it are crazy good, im wondering if normal speech is just as good
+[2023-06-02 21:34:12] 704733206792110090: here's an example (not very tweaked so it has some issues, not sure if this model is that great for singing either)
+[2023-06-02 21:35:30] 704733206792110090: it's faster than realtime so that's pretty great too
+[2023-06-02 21:36:07] 635981390965374976: not bad! maybe the transpose key is a bit off? It sounds a little breathy
+[2023-06-02 21:36:22] 704733206792110090: it's on 2
+[2023-06-02 21:37:21] 635981390965374976: I've heard that if you don't use multiples of 12 (either -12 or 12 in this case) it can sometimes sound weird
+[2023-06-02 21:37:41] 704733206792110090: 12 is a bit much though
+[2023-06-02 21:39:23] 635981390965374976: I'm not entirely sure how it works, but maybe try setting it to +12 (going from a lower pitch to a higher pitch) or -12 (higher pitch to lower pitch) and see if that does anything? I'm also going to try it out once my model finishes training
+[2023-06-02 21:39:31] 704733206792110090: here's 0
+[2023-06-02 21:39:53] 635981390965374976: yeah that definitely sounds off
+[2023-06-02 21:40:44] 635981390965374976: it could also be the quality of the training data. I'm going overkill with 1.5 hours of audio but it really just depends on the clarity of the recording. I've heard people saying that they've made great models with ~20 minutes of training data
+[2023-06-02 21:41:56] 704733206792110090: the official repo claims less than 10 minutes can already be enough
+[2023-06-02 21:42:20] 635981390965374976: I'm also using a podcast with no background music to train my model. It's really hard to remove background noises completely without comprising audio quality
+[2023-06-02 21:43:12] 635981390965374976: potentially yes, especially if you have data that is pretty diverse and high-quality.
+[2023-06-02 21:44:22] 635981390965374976: training with more epochs could also yield better results
+[2023-06-02 21:46:03] 635981390965374976: God I wish I had more VRAM
+[2023-06-02 21:46:18] 704733206792110090: how much vram do you have?
+[2023-06-02 21:46:29] 635981390965374976: 8gb, not bad not good
+[2023-06-02 21:46:33] 635981390965374976: rtx 3060 ti
+[2023-06-02 21:46:41] 704733206792110090: ah, i have a 3060 with 12gb
+[2023-06-02 21:47:06] 704733206792110090: and if something takes a lot of ram and i don't care about it being that fast, i throw it on my cpu with 48 gigs lol
+[2023-06-02 21:49:29] 635981390965374976: i had the idea of training the models on my laptop instead of my PC (so I could actually use my PC for something other than google or discord) but it nearly blew up when I tried it
+[2023-06-02 21:59:54] 704733206792110090: what'd i do
+[2023-06-02 22:00:22] 635981390965374976: https://tenor.com/view/its-fine-dog-fine-dog-fire-meme-gif-16250404
+[2023-06-02 22:23:15] 190075813603966976: is it possible to "keep" a random generated voice?
+I want to iterate on texts and try different unique voices, but once I find one I like, I'd like to be able to reuse it for other prompts.
+I know that technically you'd be able to train a clone with that voice instead but it isn't exactly the same
+[2023-06-02 22:24:06] 704733206792110090: why not have a util thing?
+[2023-06-02 22:24:32] 704733206792110090: that's exactly what history prompts are for
+[2023-06-03 00:29:51] 543112092610199563: @mylo how to install the gui. I keep on getting venv messages
+[2023-06-03 01:16:08] 635981390965374976: @mylo, I just made this using one of the models I trained overnight. I set the pitch to 0, and it sounds pretty good! I think the reason you want to choose either -12, 12, or 0 and not anything in between is because octaves are made up of 12 notes. This is also why the results start sounding really weird and glitchy if you choose something like 2 or 3. The model I trained has a british accent but you can't really tell in the result because RVC can't really do accents that well. But still very decent
+[2023-06-03 01:30:28] 635981390965374976: and this is my second model speaking with one of Ludwig's twitch clips as the input. I used -12 pitch for this one
+[2023-06-03 01:31:38] 635981390965374976: this was the input
+[2023-06-03 01:34:07] 635981390965374976: actually, -8 pitch sounds good too. Forget what I said about octaves. It's all about the quality of your training data.
+[2023-06-03 05:05:31] 755428726212132946: Hello, everyone can it support Chinese Language? I found the speakers for Chinese are really really bad... how to improve myself?
+[2023-06-03 08:16:21] 755428726212132946: after I run the sample, i got msg: No GPU being used. Careful, inference might be very slow! 
+in my terminal, but I have GPU, what's wrong, anyone can help me?
+[2023-06-03 10:02:00] 614946962139250711: You can generate random speakers with Chinese text. My guess would be if you find *any *Chinese speakers that are good, then you can find many more. If they *all* have a bad accent, then maybe Chinese is a problem in bark itself.
+[2023-06-03 10:04:44] 614946962139250711: That's a general issue about installing Cuda and Pytorch. My fork (same name as Discord) has one install method. If you are just runing it plain you will have to do something like (but this may or not work out of the box, depending on your setup, which is why people use things like *venv* or *conda*
+```
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+```
+The `-index-url https://download.pytorch.org/whl/cu118` is the GPU part. If you type this without that part, it will work only on CPU
+[2023-06-03 10:24:54] 704733206792110090: it probably has a lot to do with the input audio as well, as it's got effects applied to the vocals
+[2023-06-03 12:09:41] 1108944267432431666: from bark import SAMPLE_RATE, generate_audio, preload_models
+from scipy.io.wavfile import write as write_wav
+from IPython.display import Audio
+
+# download and load all models
+preload_models()
+
+# generate audio from text
+text_prompt = """
+     Hello, my name is Suno. And, uh — and I like pizza. [laughs] 
+     But I also have other interests such as playing tic tac toe.
+"""
+audio_array = generate_audio(text_prompt)
+
+# save audio to disk
+write_wav("bark_generation.wav", SAMPLE_RATE, audio_array)
+
+# play text in notebook
+Audio(audio_array, rate=SAMPLE_RATE)
+==========================================================
+The following problem occurs when I run this code:
+KeyboardInterrupt
+Downloading text_2.pt:   0%|          | 0.00/5.35G [04:54<?, ?B/s]
+==========================================================
+Does anyone know how to solve it?
+[2023-06-03 12:43:53] 704733206792110090: this is what it does to the extracted pitches
+[2023-06-03 12:50:21] 704733206792110090: i'll look into more pitch extraction method to add, maybe there's one that's better for songs than these
+[2023-06-03 14:14:37] 755428726212132946: this is a RAP song wrote by chatGPT for Lionel Messi, anyone good at making song via Bark can do it better? I am trying on it.
+[2023-06-03 15:39:49] 354223946414948353: i boght one for 600
+[2023-06-03 15:52:03] 712626554001293333: Hey there, I'm new ! Just wondering a couple things - 1. Is it possible to get a coherent voice longer than 15 seconds? I'm seeing it fall apart after 15.  Secondly - is it possible to get history prompts to work without doing a local install?
+[2023-06-03 18:38:46] 822833719047749683: Is there any other voice than the 9 voices listed on the suno website?
+[2023-06-03 18:49:38] 614946962139250711: There are infinite voices, just don't specific one and you create a new one that can be saved and resused. Then set history_prompt=pathtospeakerfile.npz
+[2023-06-03 18:54:01] 822833719047749683: How do I define language? Just use the language and it detects automatically?
+[2023-06-03 18:56:42] 614946962139250711: Yeah. Use a longer text if you're just making a voice maybe, a few meaty sentences. Actutally use a lot of text, like a whle book.
+[2023-06-03 18:57:00] 822833719047749683: Anywhere people that share good voices?
+[2023-06-03 18:57:31] 614946962139250711: https://github.com/rsxdalv/bark-speaker-directory has some. I have some I need to organize and test
+[2023-06-03 19:01:32] 822833719047749683: Thanks
+[2023-06-04 10:24:18] 678857602712731649: can i create api using suno and sell it?
+[2023-06-04 10:24:33] 678857602712731649: if yes how i can use custom voices ?
+[2023-06-04 10:40:30] 704733206792110090: yes, bark has an MIT license, and you can use custom voices by loading the npz file as a history prompt in bark
+[2023-06-04 12:04:02] 678857602712731649: how to host this on server and use as a api
+[2023-06-04 12:04:54] 704733206792110090: the same as you would use anything as an api?
+[2023-06-04 12:05:46] 704733206792110090: bark isn't much different from another python library
+[2023-06-04 12:06:46] 155057023833079808: Hi, Is there any prompt that i can use to have an announcer kind of voice but in female?
+[2023-06-04 12:07:07] 678857602712731649: i am a nodejs developer
+[2023-06-04 12:07:39] 704733206792110090: right, bark is a python library
+[2023-06-04 12:08:14] 704733206792110090: it's up to luck mostly, but if you have a voice that sounds how you want it to sound approximately, you can use my voice cloner
+[2023-06-04 12:09:05] 155057023833079808: I would love to. Any directions on where should i look to be able to do it?
+[2023-06-04 18:12:51] 1111317684471201812: hi..
+[2023-06-04 19:03:18] 1003702073080160277: With bark, how can I use the GPU?
+[2023-06-04 19:04:53] 249326179549446146: Is there a way to store a bark generated voice mod to use again? The first one it generated for me was really good, but since it can only do like 14 seconds it's lost forever it seems :/
+[2023-06-04 19:10:54] 171386791142621184: was wondering if there were TTS language packs for windows made with this AI that are available to download
+[2023-06-04 20:42:12] 614946962139250711: You mean that Windows itself can use? There are some fairly easy to installs, and getting better
+[2023-06-04 20:43:39] 171386791142621184: if you know any, would appreciate!
+[2023-06-04 20:43:56] 614946962139250711: I've got one but it's not the easiest so far
+[2023-06-04 20:44:08] 614946962139250711: Same name as Discord, on github, for Bark
+[2023-06-04 20:44:48] 171386791142621184: what do you mean by easiest
+[2023-06-04 20:46:11] 614946962139250711: It's got a README with a link to download, and then copy and paste the commands. I didn't not make it into a script.
+[2023-06-04 20:46:29] 614946962139250711: So it doesn't run 'by itself'
+[2023-06-04 20:46:40] 614946962139250711: But if you follow the list it should work
+[2023-06-04 20:47:01] 171386791142621184: ah i see
+[2023-06-04 20:47:08] 171386791142621184: and it uses suno voice?
+[2023-06-04 20:47:31] 614946962139250711: Any voice you want
+[2023-06-04 20:53:22] 282760425408430081: Kudos to you making this branch/fork
+[2023-06-04 20:53:35] 282760425408430081: real snazzy 🤩
+[2023-06-04 20:53:50] 614946962139250711: I got to update, the messy UI was very amusing but people are actually using it
+[2023-06-04 20:54:03] 614946962139250711: All the typos and funny mistakes... probably gonna go lol
+[2023-06-04 20:54:09] 282760425408430081: *was trying to use the cli with history prompts....but no go lol*
+[2023-06-04 20:54:10] 614946962139250711: Still keeping the emoji
+[2023-06-04 20:55:06] 171386791142621184: it's the page with your discord name / bark?
+[2023-06-04 20:55:36] 614946962139250711: Yeah I just feel weird linking it so much, but you yeah the Infinity weird one
+[2023-06-04 21:22:20] 282760425408430081: 😭
+[2023-06-04 21:24:07] 614946962139250711: Try setting the 'confused mode' or whatever I called it
+[2023-06-04 21:24:19] 282760425408430081: Yeah ngl I seen travolta mode and I had to screenshot it
+[2023-06-04 21:24:40] 614946962139250711: I think I might just calll it 'Force Max Length' but I'm debating it
+[2023-06-04 21:25:26] 614946962139250711: It's actually super userful for things like music, where you don't always have 'words' really. You just want the song to keep going
+[2023-06-04 21:25:58] 614946962139250711: Not actualy useful for making joke punchlines though
+[2023-06-04 21:26:20] 282760425408430081: Yeah, I sorta figured. The hallucinations are really funny as well
+[2023-06-04 21:27:07] 1077506290533797888: hi guys i saw someone here mention he can train a voice by doing like batch generate lots of time for same sentence? can someone explain a little?
+[2023-06-04 21:29:19] 614946962139250711: I don't know if that was me but it's not super effective right now, though maybe later. Better to carefully choose good wavs, then choose good text. Keep it simple.
+1) Pick a good clip. Upload it.
+2) Try using the clone from the wav with a few pieces of text and resaving. If they all suck, try something else. Try different kinds of text though, in the style of the person speaking. LONG TEXT too.
+3) If some are better than others, like it almost gets close once in awhile, then maybe keep trying different text, you might get it. If none of the get close you gotta try a new .wav
+[2023-06-04 21:31:29] 1077506290533797888: you mean in clone voice? cause i thought he spoke about doing it in the regular text to speech screen
+[2023-06-04 21:31:52] 614946962139250711: Oh that was me, but that's a thing for a type of voice. Not a specific CLONE
+[2023-06-04 21:33:06] 614946962139250711: I was doing thisk, trying to get a female 'movie announcer' https://pastebin.com/4JAMUaRR
+[2023-06-04 21:33:16] 614946962139250711: You do it with the ANNOUNCER voice
+[2023-06-04 21:33:23] 614946962139250711: and the voice will switch half way to a woman... if you are lucky
+[2023-06-04 21:33:29] 614946962139250711: However the woman is not very movie voice like
+[2023-06-04 21:33:31] 614946962139250711: but it works
+[2023-06-04 21:33:59] 614946962139250711: That's a silly prompt, don't take that as a manaul. It was almost a joke to see how goofy it coudl work.
+[2023-06-04 21:34:18] 1077506290533797888: oh ok
+[2023-06-04 21:34:24] 614946962139250711: https://discord.com/channels/1069381916492562582/1083129341870878780/1114939878925402204
+[2023-06-04 21:34:39] 1077506290533797888: can you recommend on a good voice i can download?
+[2023-06-04 21:34:49] 1077506290533797888: a female voice that sounds good
+[2023-06-04 21:34:57] 614946962139250711: What kind?
+[2023-06-04 21:35:01] 614946962139250711: Here try these
+[2023-06-04 21:36:19] 1077506290533797888: i like shirley
+[2023-06-04 21:36:24] 1077506290533797888: it was good
+[2023-06-04 21:37:22] 614946962139250711: I can't find my own stuff I posted in Discord, so annoying you can't search for fiels
+[2023-06-04 21:37:30] 614946962139250711: Just three random ones
+[2023-06-04 21:37:33] 614946962139250711: Not sure if good
+[2023-06-04 21:38:35] 1077506290533797888: i have these
+[2023-06-04 21:38:40] 1077506290533797888: they are good
+[2023-06-04 21:39:05] 1077506290533797888: shirley is good as well
+[2023-06-04 21:39:24] 1077506290533797888: how you guys create these?
+[2023-06-04 21:40:03] 614946962139250711: A lot of mine were just luck. Although I did try and find good female voices for a period of time because I had mostly men
+[2023-06-04 21:41:16] 1077506290533797888: but where did you do them?
+[2023-06-04 21:41:34] 171386791142621184: Is it possible to install those voices on windows tts for  immersive reader & read mode?
+[2023-06-04 21:41:57] 614946962139250711: I do some more technical stuff now. But I got plenty of voice just by using very good text and being patient.
+[2023-06-04 21:42:31] 614946962139250711: Find writing that has a very strong sense of style like you can hear it in your head. And give Bark rally big text chunks. Not SO MUCH it can't finish. But close. Don't just do one sentence or two. Do 3, or 4.
+[2023-06-04 21:42:49] 1077506290533797888: i mean how do you save the voices for choosing them later? are you doing it on the clone voice tab?
+[2023-06-04 21:42:55] 614946962139250711: In my UI
+[2023-06-04 21:43:05] 614946962139250711: It should save automatically, but also there is a 'save every npz' button
+[2023-06-04 21:43:10] 614946962139250711: with diamonds
+[2023-06-04 21:43:30] 614946962139250711: One sec
+[2023-06-04 21:44:26] 171386791142621184: im stuck with the microsoft robotic voices at the moment and came here hoping to find more natural voices for my tts reader
+[2023-06-04 21:44:55] 614946962139250711: Your UI isn't quite the same, I'm updating it so it's differnt
+[2023-06-04 21:44:59] 614946962139250711: but should be same options
+[2023-06-04 21:45:23] 614946962139250711: Then Take a LOT of text. Like 10 pages. And make a ton rand voices.
+[2023-06-04 21:46:05] 1077506290533797888: oh i think we have diff ui
+[2023-06-04 21:46:13] 1077506290533797888: mine is less options
+[2023-06-04 21:46:23] 614946962139250711: It probably has less but is hould have those
+[2023-06-04 21:46:31] 614946962139250711: Look under the tabs
+[2023-06-04 21:48:18] 1077506290533797888: thats mine
+[2023-06-04 21:49:42] 614946962139250711: Oh yeah that's a different one, `https://github.com/JonathanFly/bark`
+[2023-06-04 21:51:40] 1077506290533797888: so just install this one?
+[2023-06-04 21:52:04] 614946962139250711: If you specifically want to do do the thing I said, then sure
+[2023-06-04 21:52:20] 1077506290533797888: will do thanks ill try it
+[2023-06-05 01:12:50] 127877744397778944: Is it possible to read audiobooks with celeb reading them?
+[2023-06-05 07:53:51] 343797252914937856: Hey guys, so i have a custom .npz file of my voice and want to use this is a history prompt speaker,  is this currently supported, if yes what are the steps to achieve this
+[2023-06-05 08:16:57] 130814139848196096: load it into a dict and pass it as history_prompt argument
+[2023-06-05 08:17:00] 130814139848196096: or use a UI
+[2023-06-05 15:14:39] 1105542696963158016: Hey who speak french ?  good luck
+[2023-06-05 15:18:17] 236873623267311618: Yes. Par contre, évite de parler dans le #👋┃welcome. ;)
+Ce sera plutôt ici pour les français : https://discord.com/channels/1069381916492562582/1102237095914901524
+[2023-06-05 16:48:17] 617208058677821450: I'm also looking for a way to read ebooks or other things. Including emotion or action cues. I don't care about celeb voices just a normal voice would work.
+[2023-06-05 17:41:18] 1105542696963158016: how i can install brak plz ?
+[2023-06-06 00:37:45] 870439140582379550: i randomly remixed a song (not using the ai, but on my own) anyone want to hear it?
+[2023-06-06 00:38:01] 870439140582379550: its kinda funny
+[2023-06-06 00:38:10] 870439140582379550: *just kinda*
+[2023-06-06 06:35:23] 715747977804906509: hello  everyone 
+I like your project.
+[2023-06-06 09:11:33] 1077506290533797888: hi Jonathan  ,  is there an option to train a voice? not the clone voice
+[2023-06-06 09:19:20] 614946962139250711: Not in the sense you mean yet, fine-tuning the actual model. That's all pretty experimental at the moment, though it's probably easy, and will be easier when bark is in ggml and huggingface transformers
+[2023-06-06 09:20:36] 1077506290533797888: so the voice i tried to clone is nothing close to the src
+[2023-06-06 09:21:02] 1077506290533797888: is there an option you know how to train and clone voices so they will similar to the src?
+[2023-06-06 09:23:46] 614946962139250711: The cloning needs to get better. Try testing with this .wav I find it clones easily, I use it to make I didn't break something.
+[2023-06-06 09:24:38] 1077506290533797888: im having trouble installing your web ui
+[2023-06-06 09:24:42] 1077506290533797888: the one you sent me
+[2023-06-06 09:24:56] 1077506290533797888: i downloaded python3.10 miniconda
+[2023-06-06 09:25:02] 1077506290533797888: did the git clone
+[2023-06-06 09:25:16] 614946962139250711: Good news I am trying to improve the install, well not now, but working on it in about 90 minutes
+[2023-06-06 09:25:23] 614946962139250711: But you can ask question now
+[2023-06-06 09:25:33] 1077506290533797888: how do i install it?
+[2023-06-06 09:25:46] 614946962139250711: Are you on windows?
+[2023-06-06 09:25:47] 1077506290533797888: i did git clone
+[2023-06-06 09:25:49] 1077506290533797888: yes
+[2023-06-06 09:25:58] 614946962139250711: Okay so you start the miniconda prompt
+[2023-06-06 09:25:59] 614946962139250711: it's a program
+[2023-06-06 09:26:10] 1077506290533797888: how?
+[2023-06-06 09:26:28] 614946962139250711: It should be in your start menu. I think "Miniforge Prompt"
+[2023-06-06 09:26:54] 614946962139250711: After that you can type the list of the commands. But make sure you see (base) that means you started the right program.
+[2023-06-06 09:27:20] 1077506290533797888: i have the miniconda3 folder
+[2023-06-06 09:27:28] 1077506290533797888: which has conda file
+[2023-06-06 09:27:32] 614946962139250711: Oh did you run the .exe?
+[2023-06-06 09:27:38] 1077506290533797888: python
+[2023-06-06 09:27:38] 614946962139250711: After you downloaded?
+[2023-06-06 09:27:52] 1077506290533797888: i installed the python 3.10 miniconda
+[2023-06-06 09:27:58] 614946962139250711: It's an install file for a program. The program is then a regular program you start, called 'miniforge prompt'
+[2023-06-06 09:28:42] 1077506290533797888: do i need to install miniconda3 for windows?
+[2023-06-06 09:29:00] 1077506290533797888: cause in instruction it says download python 3.10 miniconda
+[2023-06-06 09:30:19] 614946962139250711: Yeah you install it. "python 3.10 miniconda" means "the version of miniconda that is python 3.10"
+[2023-06-06 09:30:32] 614946962139250711: These are good questions, I will clarify this later in instructions
+[2023-06-06 09:31:17] 614946962139250711: Also, there are so many versions of conda, mamba, miniconda, miniconda-pypy, it is confusing
+[2023-06-06 09:31:25] 614946962139250711: Although in theory, they all should work
+[2023-06-06 09:33:57] 1077506290533797888: dont know why but i dont have miniforge
+[2023-06-06 09:34:12] 1077506290533797888: well ill wait till you do your changes and then try again
+[2023-06-06 09:35:24] 614946962139250711: What was the .exe file you downloaded? exact name. I bet this is easy fix.
+[2023-06-06 09:36:31] 614946962139250711: I just need a little video or pictures
+[2023-06-06 09:42:01] 614946962139250711: I'll be working on in 90 minutes changes may be end of day
+[2023-06-06 10:25:43] 1077506290533797888: ok thanks
+[2023-06-06 10:26:16] 1077506290533797888: i cant send now ill send later when ill be home, thanks
+[2023-06-07 07:42:10] 395182710215278602: @Jonathan Fly Recommending Mamba in your readme was a bad idea
+[2023-06-07 07:42:54] 395182710215278602: I struggled installing your ui for a while until I finally caved in and attempted to install it with Conda (where it worked)
+[2023-06-07 07:43:10] 395182710215278602: Please reconsider and use the regular Conda instructions instead
+[2023-06-07 07:43:26] 395182710215278602: Mamba does not have wide adoption yet
+[2023-06-07 07:43:46] 395182710215278602: I imagine many users faced similar issues
+[2023-06-07 07:44:04] 395182710215278602: Save yourself headache and issue reports
+[2023-06-07 07:55:47] 614946962139250711: I discovered Mamba is the only one that doesn't default to adding it to the path in windows, for some weird reason. Which was confusing a ton of people. `https://github.com/conda-forge/miniforge/issues/453` It's fast but I agree, too flakey. I will switch. What did you install specifically? I was gonna use Miniconda3 purely because oobabooga text-generation-webui uses it, and they must have a good reason, since they recently switched.
+[2023-06-07 11:07:53] 346260239407906816: Can someone enlighten me about how to prepare training data in the right format for the different language support?
+[2023-06-07 13:06:52] 1105862212221943919: How do I clone a voice with Bark?
+[2023-06-07 13:16:16] 1105862212221943919: If I don’t get an answer in 10 min, you all are going to get COVID and Die.
+[2023-06-07 13:40:49] 351775458758623233: :Shiba_Hello:
+[2023-06-07 15:16:32] 886639463034413166: Hello
+[2023-06-07 15:16:44] 886639463034413166: Does Bark work with AMD GPUs on Windows?
+[2023-06-07 17:49:09] 1030418177622016020: Hi
+[2023-06-07 17:49:18] 1030418177622016020: Everbody
+[2023-06-07 17:49:42] 614946962139250711: I have only seen AMD on linux so far `https://github.com/suno-ai/bark/issues/59`
+[2023-06-07 18:52:16] 886639463034413166: Roger that.
+[2023-06-07 19:22:54] 784722049293352992: i get that error while installing bark ui from bat file
+[2023-06-08 00:36:33] 614946962139250711: If you're still trying to install Bark, you try this. I could use a tester and it probably works https://github.com/JonathanFly/bark/tree/main/one-click-bark-installer but windows only for just now.
+[2023-06-08 03:45:12] 763513969574543410: does anyone know if there is a way to quantize bark? Thanks!
+[2023-06-08 04:02:41] 614946962139250711: Probably not too hard but Bark is eventualy being converted to both ggml and huggingface transformers, where it will a lot easier probably.
+[2023-06-08 04:21:47] 330677797720686604: if you want int8 inference time quantization you could try following https://pytorch.org/docs/stable/quantization.html
+[2023-06-08 04:22:02] 330677797720686604: I think all the ops should be supported but it probably won't work straight out of the box
+[2023-06-08 23:53:51] 474747428944216068: I wish I knew how to use github projects better
+[2023-06-08 23:54:12] 474747428944216068: Anyone have advice on how to get started so I can run Bark without depending on a waitlist for the website?
+[2023-06-08 23:54:19] 474747428944216068: Any resources for a beginner?
+[2023-06-08 23:54:56] 474747428944216068: (I'm also on a Macbook, so it feels like I may need a PC for this)
+[2023-06-09 00:00:28] 1030261316495097937: Hello good evening, I wonder if anyone is kind enough to explain how to use the . Npz to use my own voice? Once cloned in hugginface space
+[2023-06-09 00:26:16] 999403297817510040: I just stumbled upon this project in Github. I'm wondering can I somehow use it with my own voice?
+
+Is there a workflow already in place?
+
+Thanks
+[2023-06-09 02:46:28] 198958687719522304: made with bark:
+[2023-06-09 02:46:41] 198958687719522304: elona musk 🙂
+[2023-06-09 03:29:20] 351775458758623233: how do you create the avatar?
+[2023-06-09 03:29:50] 198958687719522304: I have a discord bot that makes images with stable diffusion
+[2023-06-09 03:29:59] 198958687719522304: the bot also makes voices with suno and sound clips
+[2023-06-09 03:30:04] 351775458758623233: will it installed on my selected drive? my drive C in on red line rn :dogo:
+[2023-06-09 03:30:07] 198958687719522304: and then it can also make /deepfake 's
+[2023-06-09 03:30:36] 351775458758623233: oh that is cool! care to share? :peepopray:
+[2023-06-09 03:31:20] 198958687719522304: hope i dont get kicked from server for sharing i love bark lol
+[2023-06-09 03:32:09] 198958687719522304: hrm maybe that invite is to a channel that wont work
+[2023-06-09 03:32:40] 198958687719522304: guess it worked 👍
+[2023-06-09 03:32:46] 351775458758623233: ty ser! you can delete it now xD
+[2023-06-09 03:33:01] 351775458758623233: yes I am in :keanuthanks:
+[2023-06-09 03:33:10] 198958687719522304: deleted
+[2023-06-09 03:33:26] 351775458758623233: thanks again!
+[2023-06-09 03:33:38] 351775458758623233: I will try the one click bark installer now 🙂
+[2023-06-09 03:33:48] 351775458758623233: excited to try these programs
+[2023-06-09 03:35:00] 351775458758623233: oh I guess it really needs to install on my drive C :PES_HahaDead:
+[2023-06-09 07:16:40] 1071736212269826098: I have it installed on E drive, only the model part is on c drive.
+[2023-06-09 07:36:24] 387523916693897219: General question - does bark always use a history prompt (and provides a default when nothing is specified) or can it tart infering from 0 (just given a text prompt) ?
+[2023-06-09 07:37:34] 351775458758623233: how do you manage to install it? because i am having this error when installing it on my drive D. btw I already installed the bark infinity (not the one click installer) on my drive C and its taking too much space :sadmask:
+[2023-06-09 07:40:37] 1071736212269826098: oh your python path has some space for example C:\your name\python\python.exe .... I had similar problem with other apps using python/miniconda which was solved by reinstalling python in a path without spaces in any folder name.
+[2023-06-09 07:43:00] 1071736212269826098: So check if your python path has any folder name with spaces. And dont just remove space it will mess things up. Rather have new and clean python install.
+[2023-06-09 07:46:38] 351775458758623233: if I reinstall python will it affect my other apps like stable diffusion, etc?
+[2023-06-09 07:47:44] 1071736212269826098: yes you will have to redirect python path.
+[2023-06-09 07:48:49] 1071736212269826098: if you are using these apps after creating virtual environment than that will be your only problem, if not then lots and lots of errors
+[2023-06-09 07:52:46] 351775458758623233: maybe I will try to reinstall it some other time. need to check and back up some files on these apps 😅  thanks man!
+[2023-06-09 07:53:34] 1071736212269826098: No problem 🙂
+[2023-06-09 13:52:54] 351775458758623233: meaning its using my CPU instead of GPU? how to change it?
+[2023-06-09 13:55:07] 614946962139250711: No you are good! The message for not using GPU is "No GPU being used. Careful, inference might be very slow!"
+[2023-06-09 13:55:53] 614946962139250711: That is normal that's why I added 'cpu is normal'
+[2023-06-09 13:56:06] 351775458758623233: oh! do you think slow generation is cause by not installing it on my drive C?
+[2023-06-09 13:56:40] 614946962139250711: Yeah if you don't see the other message it's good
+[2023-06-09 13:56:58] 614946962139250711: Shouldn't matter
+[2023-06-09 13:57:14] 614946962139250711: Unless your other drive is a slow non SSD or something
+[2023-06-09 13:57:30] 351775458758623233: I installed bark also on my drive C yesterday and it seems it way faster to generate.
+[2023-06-09 13:57:38] 351775458758623233: oh that is why xD
+[2023-06-09 13:57:51] 614946962139250711: OH is it a old hard drive not SSD? Then yeah it might mattter
+[2023-06-09 13:58:30] 351775458758623233: also sometimes it generate different prompt(sounds) than what I type on "Main Text Prompt"
+[2023-06-09 13:59:03] 614946962139250711: That might be just Bark, but if you are using [sound] or [laugh] the it is pretty common. those are not reliable
+[2023-06-09 14:00:13] 351775458758623233: I see! thanks for replying sir!
+[2023-06-09 14:01:00] 614946962139250711: if it happens very often with pure regular words, then it might be a bug in bark infinity. though it does happen sometimes no matter what
+[2023-06-09 14:01:17] 351775458758623233: btw do you have guide for all these buttons? noobie guide :dogo:
+[2023-06-09 14:01:24] 614946962139250711: i need to make one yeah
+[2023-06-09 14:01:38] 614946962139250711: I want to find a way to add popup help in Gradio
+[2023-06-09 14:02:21] 614946962139250711: i am mid way through adding some better descriptions, i'ts the other branch, but it's not done yett
+[2023-06-09 14:02:54] 614946962139250711: the pictures on the current github are that branch, and it is a bit better explained
+[2023-06-09 14:03:01] 351775458758623233: oh I will keep my tab on your github for update then 🙂
+[2023-06-09 14:03:31] 614946962139250711: you can try switching but I am worried it might mess up your install so I would just wait for now
+[2023-06-09 14:04:50] 351775458758623233: currently im using bark on my drive D installed. Will check later the other bark (installed in drive C) finger cross hope it still works
+[2023-06-09 14:05:07] 614946962139250711: is the other bark the same same bark installer?
+[2023-06-09 14:06:09] 351775458758623233: oh no! I installed Mamba (bark) on drive C and one click installer on drive D
+[2023-06-09 14:06:45] 614946962139250711: huh, well then it's possible the one click installer is using slightly different versions than mamba, so if it's slower for that reason, I should try and figure out what is different
+[2023-06-09 14:07:40] 614946962139250711: sometimes one tiny difference makes a big difference
+[2023-06-09 14:09:10] 614946962139250711: I tried to make the one click installer the same but it skips nvidia toolkit installing from nvidia, instead of just from conda, because it wasn't always installing correctly. maybe I can make 'also_install_this_might_be_faster.bat'
+[2023-06-09 14:11:14] 351775458758623233: maybe because of Mamba is using (miniconda) and one click installer is using regular CMD?
+[2023-06-09 14:11:52] 351775458758623233: also I notice the difference of my CPU usage. it was more good on Drive C bark
+[2023-06-09 14:12:00] 614946962139250711: One click uses miniconda3, starts automatically
+[2023-06-09 14:12:26] 614946962139250711: But not mamba version
+[2023-06-09 14:12:26] 351775458758623233: oh i see
+[2023-06-09 14:13:25] 614946962139250711: Whatever the difference I can try to make it the same, later
+[2023-06-09 14:14:12] 614946962139250711: I switched because I copied oogobogo installer and that's what they use
+[2023-06-09 14:14:18] 351775458758623233: also I did find hard to install the Mamba version before because the code is not working when I copy paste in on anaconda prompt. but I did find it works on Mambaforge installer the you give on later version of bark
+[2023-06-09 14:15:05] 614946962139250711: I may ask you questions later today, to help make installer better, maybe this afternoon
+[2023-06-09 14:16:16] 351775458758623233: its already evening here. but just mention me and I will try to answer it 🫡
+[2023-06-09 18:59:26] 328000465394466817: Is there a small wav file for each voice in the repo somewhere, so I don't have to generate each one for 20 seconds to see if I like it?
+[2023-06-09 19:09:11] 614946962139250711: https://suno-ai.notion.site/8b8e8749ed514b0cbf3f699013548683?v=bc67cff786b04b50b3ceb756fd05f68c has audio sample
+[2023-06-09 19:15:24] 328000465394466817: Is there more somewhere?
+[2023-06-09 19:24:05] 614946962139250711: Not really but there are better voices out there anyway, look in this Discord 'audio prompts'. Unfortunately Discord makes it hard to search for filenames but they are .npz files if you scroll a around. Some `https://rsxdalv.github.io/bark-speaker-directory/` as well
+[2023-06-09 19:24:42] 328000465394466817: Maybe you can make a repo just for people to PR voices they come up with
+[2023-06-09 19:25:00] 614946962139250711: That's what the repo is for actually
+[2023-06-09 19:25:10] 328000465394466817: The main repo?
+[2023-06-09 19:25:25] 614946962139250711: `https://rsxdalv.github.io/bark-speaker-directory/` it's https://github.com/rsxdalv/bark-speaker-directory
+[2023-06-09 19:25:57] 328000465394466817: so there are more samples
+[2023-06-09 19:26:23] 614946962139250711: Ah, I thought you meant 'more samples of the built in Suno voices' not 'more voices in general'
+[2023-06-09 19:30:26] 614946962139250711: One of my first voices, still a favorite. And just chew through long text like crazy too.
+[2023-06-09 19:33:49] 328000465394466817: Why don't you put it on the directory?
+[2023-06-09 19:34:38] 614946962139250711: I will organize a ton of voices, eventually. Just got to fix higher priority things
+[2023-06-09 19:34:43] 614946962139250711: On my bark fork
+[2023-06-09 19:35:54] 328000465394466817: I think an easy way to share these npz files, and hear them would probably help bark the most
+[2023-06-09 19:36:13] 328000465394466817: Maybe if you make enough npz files with descriptions diffusion can figure out how to do text to npz
+[2023-06-09 19:36:54] 614946962139250711: Yeah totally, you could just be like [sad angry older gentleman southern accent] or something
+[2023-06-09 19:37:16] 328000465394466817: I don't think anyone else has made anything like that
+[2023-06-09 19:37:25] 614946962139250711: you'll probaby be able to do that and generate a unique voice on demand eventually anyway
+[2023-06-09 19:37:25] 328000465394466817: prompt + voice description to audio file
+[2023-06-09 19:38:10] 614946962139250711: You can do it now, but not like that. And it's more random. But if you search you'll find example. Like if you want a sports announcer, give Bark sports announcer transcripts with no voice
+[2023-06-09 19:38:27] 614946962139250711: If you want a preacher, give bark "Christ, something something." stuff
+[2023-06-09 19:38:31] 328000465394466817: hmm
+[2023-06-09 19:38:37] 328000465394466817: ok so what if you did something like this
+[2023-06-09 19:38:37] 614946962139250711: It works but not so well you can only do it one time
+[2023-06-09 19:38:47] 614946962139250711: I think I know what you are asking
+[2023-06-09 19:38:54] 614946962139250711: and it's gonna be a feature anyway
+[2023-06-09 19:38:56] 614946962139250711: even though it doesn't work wel
+[2023-06-09 19:39:06] 328000465394466817: ChatGPT: give me a sentence that a person who is [sad angry older gentleman southern accent] would say
+[2023-06-09 19:39:09] 614946962139250711: I'm gonna had 'voice only prompts' that just use the tetxt to generate a voice
+[2023-06-09 19:39:10] 614946962139250711: ohhh
+[2023-06-09 19:39:17] 614946962139250711: that would be cool
+[2023-06-09 19:41:21] 614946962139250711: If you want to try it, you have to use like 20 text prompts too. So ChatGPT would help. Since many of them may not work
+[2023-06-09 19:41:27] 614946962139250711: And it's good to try a variety
+[2023-06-09 19:48:55] 328000465394466817: What's in an npz file?
+[2023-06-09 20:07:38] 614946962139250711: it's basically just the prompt, like a gpt prompt, but 3 versions. 1 for each of the bark models. And the prompt is 100% the same as the output from bark, so when save a voice, you are just saving the bark output as a new prompt
+[2023-06-09 20:08:58] 614946962139250711: for any .npz file you can replay the sample from it by just playing the tokens
+[2023-06-09 20:09:18] 614946962139250711: so don't like, make a voice using your passwords
+[2023-06-09 21:59:21] 709339619111469126: Can anyone help? I am developing  AiNGEL a conversational platform for virtual, integrated health, care and healthy ageing. Virtual personas will curate the platform we call "Nightingalers" (virtual carers and companions) who represent diverse ethnic and cultural backgrounds. I am looking for voices that represent black and ethnic, middle-aged and over-male and female voices n UK English accents; English (West Indian), English (Indian and Pakistan), English  with Noth and Southern European accents et al. I've been  researching most of the TTS ai tools and their voice libraries and have not found much middle or older age representing  BAME communities.  Any advice, direction, suggestions are welcomed and appreciated. Stay safe and in good health.
+[2023-06-09 22:06:16] 614946962139250711: Bark can probably do all those English accents, but somebody has to make the voices using Bark random generation, the voice cloning, or a combination of both. For a virtual conversation though, Bark is a bit slow, and will have more latency than other options.
+[2023-06-09 22:27:07] 709339619111469126: Appreciate your response, JonathanFly, I am new to Bark and still learning, and on the waiting list for full access. I would need a tutorial on how to implement your suggestions.  Good to know there's a way to achieve what we want.
+[2023-06-09 22:33:42] 614946962139250711: The short version is you can use the "voice cloner" which is not an official part of Bark was developed independently `https://github.com/gitmylo/bark-voice-cloning-HuBERT-quantizer`and the same cloning is part of most other Bark graphical interfaces by now too. Or you can type in text that is in the style of your voice, and use a random voice in Bark. And with a little luck and patience you can usually find a voice like you want. So you listen to all the bark audio outputs, with each a random voice, and you can save the voices for each with a parameter or a settings. Each has an .npz file. And you hope if you make 25 voices, you find one that is correct. I am not sure how best to do that with accents it's pretty new concept. You would probably have to first experiment to find text that tends to produce older voices with accents. An example if you write text that sounds like a preacher, Bark will give you more preacher-style voices out of 20 random voices, than text not like that. And it's pretty significant effect with some text. Even just the word "Christ," as the first word in your text will give you more preachers.
+[2023-06-09 22:43:25] 709339619111469126: You make it sound easy and very possible.  I'll check out the link you've provided. Is it possible to access Bark Voice Library from Discord or do I need to wait for access to be granted? Appreciate you helping out and your time.
+[2023-06-09 22:46:56] 614946962139250711: There isn't really a fancy library so far there's one at `https://rsxdalv.github.io/bark-speaker-directory/` but not a lot of coordination. but is early
+[2023-06-09 23:03:09] 709339619111469126: Appreciate your input, Jonathan.  May I ask what you're working on at present?
+[2023-06-09 23:19:53] 614946962139250711: Nothing in particular in audio really, just trying stuff for fun.
+[2023-06-09 23:21:17] 709339619111469126: Great! Having fun is very important. Only way to go.
+[2023-06-10 02:28:49] 196118689831976961: hello 👋
+[2023-06-10 08:10:24] 1084146205010968678: hello, i was asking how can you intergrate bark ai to your voice assistant ?
+[2023-06-10 14:08:46] 704733206792110090: it seems that if you put [excited], the generated audio will sound excited. This doesn't seem to be in the list, but it has worked somewhat consistently in my tests.
+[2023-06-10 15:51:08] 614946962139250711: Seems like the tags are barely explored. I was amused [SPEAKING IN ALIEN LANGUAGE] and works sometimes. I was hoping for science fiction aliens, bu it's usually a random foreign language. *Sometimes *I think it's a sci fi aliens.
+[2023-06-10 15:55:14] 704733206792110090: lol
+[2023-06-10 17:14:18] 205000495654371328: I was in need of someone to dub my history videos, and suddenly this magnificent creation appears to me. This is amazing, I'm trying to learn how to use it.
+[2023-06-10 17:33:33] 387523916693897219: Of course everyone already saw https://ai.honu.io/papers/musicgen/
+[2023-06-10 19:56:44] 656976044045107200: https://huggingface.co/spaces/facebook/MusicGen if you just want to play around with it
+[2023-06-10 19:58:21] 656976044045107200: I think the collest part is the melody conditioning  ... like controlnet for music
+[2023-06-10 22:26:18] 1071736212269826098: @Jonathan Fly can you make audiocraft generate larger songs by your joining method? https://github.com/facebookresearch/audiocraft
+[2023-06-10 22:48:45] 614946962139250711: I really don't have time tonight, but I will tomorrow. I am playing with it and I want to do it just for myself, right now out of frustration, even though I am about to leave. Their official samples have a sliding windows... but they didn't make it into the default demo. (Maybe the samples are very cherry picked...)  Probably not. I bet it's great and they just didn't bother. Early impressions are that going outside the genres they used in the samples isn't *super *great, but maybe I'm using wrong words. But you can get good stuff. Did they publish the training prompts it's hard to know what works.
+[2023-06-10 22:50:27] 614946962139250711: I was really hoping I could find some 80s vocoder keywords that get it outputting lyrics, so far no luck
+[2023-06-10 22:52:18] 1071736212269826098: i am trying some good melodies for conditioning with default settings, 1/10 gets good result. otherwise its crappy
+[2023-06-10 22:53:05] 614946962139250711: Yeah the melody was so bad I was wondering if I screwed up the install somewhere, it was like just way off
+[2023-06-10 22:57:20] 1071736212269826098: also you have to keep the melody time and generation time same otherwise it comes out very weird
+[2023-06-10 22:57:39] 614946962139250711: Oh you know.... I just assumed it was gonna take care of that tlol
+[2023-06-10 22:57:41] 614946962139250711: that explains it
+[2023-06-10 22:57:43] 614946962139250711: then
+[2023-06-10 22:58:38] 1071736212269826098: its just like neonate, let it grow. 😄
+[2023-06-10 23:00:14] 1071736212269826098: from nogame nolife intro melody.....
+[2023-06-10 23:00:38] 614946962139250711: It's really good at EDM for sure. Anything electronic really.
+[2023-06-10 23:01:09] 1071736212269826098: yeah i used its edm prompt only, it sucks at heavy metal
+[2023-06-10 23:02:28] 614946962139250711: Got obsessed with pirate shantys. Finally getting there. Tricky with no vocals.
+[2023-06-10 23:03:48] 614946962139250711: "A jovial pirate shanty with hearty group vocals, buoyant banjo plucking, and rhythmic handclapping, providing an irresistible invitation to join the rollicking camaraderie."
+[2023-06-10 23:03:57] 614946962139250711: I always ASK for vocals anyway.
+[2023-06-10 23:04:42] 1071736212269826098: https://tenor.com/view/minnie-mouse-and-mickey-mouse-gif-26198499
+[2023-06-10 23:06:16] 1071736212269826098: rock is also acceptable but with light drums and guitar in prompt
+[2023-06-11 04:16:33] 690739072976814081: Hello guuuuuuuuuuuys!!
+[2023-06-11 04:17:00] 690739072976814081: Im stunned by Bark, it's IN SANE
+[2023-06-11 04:17:06] 690739072976814081: Thanks a lot for creating it
+[2023-06-11 04:17:55] 690739072976814081: I do youtube videos about crypto, and this is going to be shown to my Latam audience on the next video
+[2023-06-11 04:18:47] 690739072976814081: Does anyone know the list of all the patterns that Bark accepts? I found this
+[2023-06-11 04:19:30] 690739072976814081: If anyone wants to learn more about crypto (or spanish 😉 ) just reach me up
+[2023-06-11 04:46:29] 240351796294451200: Any idea why I keep getting `AttributeError: module 'torch' has no attribute 'inference_mode'` ?
+[2023-06-11 05:02:42] 330677797720686604: you probably dont have torch 2.0 installed
+[2023-06-11 05:06:08] 240351796294451200: so odd that it runs in the webUI but not in the command prompt
+[2023-06-11 05:16:05] 614946962139250711: The webui might be starting a virtual environment
+[2023-06-11 05:18:03] 240351796294451200: yeah you might be right
+I think it is using conda (no proof of it so far LOL)
+[2023-06-11 05:22:42] 614946962139250711: if there is cmd_somethign.batt file
+[2023-06-11 05:22:45] 614946962139250711: that might start the conda
+[2023-06-11 05:22:58] 614946962139250711: otherwise it's like venv/Script/activate.bat
+[2023-06-11 05:23:00] 614946962139250711: usually
+[2023-06-11 05:24:12] 240351796294451200: maybe mine is old, i see `cmd_windows.bat`
+[2023-06-11 05:24:37] 614946962139250711: It's not my webui is it?
+[2023-06-11 05:25:01] 614946962139250711: Is it Bark Infinity?
+[2023-06-11 05:25:34] 614946962139250711: I copied that .bat file just real basic from the other another installer
+[2023-06-11 05:26:47] 240351796294451200: Im not sure
+[2023-06-11 05:27:05] 614946962139250711: Is the webui full of emojis
+[2023-06-11 05:27:12] 240351796294451200: that one just opens the cmd with conda
+[2023-06-11 05:27:35] 240351796294451200: I got it working once I installed torch
+[2023-06-11 05:27:50] 240351796294451200: via `pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu117 --force`
+[2023-06-11 05:28:26] 614946962139250711: You might be crossing the streams a bit doing that but there but not a big deal unless you have other AI models all installed together.
+[2023-06-11 05:29:11] 240351796294451200: i'm new to this, so i'm learning to be honest
+[2023-06-11 05:29:38] 240351796294451200: but with this command line running, im happy. just got to figure out how to split things up and what not in the command lines
+[2023-06-11 05:29:49] 240351796294451200: which I am happy you listed on GitHub
+[2023-06-11 05:30:26] 614946962139250711: If it's mine then if you don't use the install, you might have a better time. just type 'mamba blah' or 'conda blah'
+[2023-06-11 06:40:02] 889063770272440330: From the MusicGen page:
+> It is possible to generate longer sequence using a fixed 30 seconds windows. We then slide the window by chunks of 10 seconds, keeping the last 20 seconds that were generated as context.
+I'm guessing the last n seconds can be sliced from the output tensor e.g. `output[:, :, ...]` but how is that fed back in?
+[2023-06-11 07:22:22] 889063770272440330: Oh figured it out, just pass it to `model.generate_continuation` 🙂
+[2023-06-11 09:14:36] 155057023833079808: is there a google colab for bark infinity? I am using the non-infinty one atm
+[2023-06-11 09:14:51] 155057023833079808: and thanks for helping 😄
+[2023-06-11 09:23:26] 1071736212269826098: can you explain in detail or show by screenshot how to do that?
+[2023-06-11 09:55:55] 889063770272440330: ```python
+# %%
+# Generate some initial samples
+from audiocraft.utils.notebook import display_audio
+
+model.set_generation_params(
+    duration=30.0
+)
+
+descriptions = [
+    "Twirling melodies, harmonious vocals, and infectious beats transport you to a groovy world of love and peace in this 60s pop song.",
+    "An ethereal fusion of classical elegance and whimsical surrealism, this song inspired by Mozart enchants the senses with its intricate melodies and dreamlike imagery.",
+    "An enchanting blend of intricate baroque arrangements and surrealistic elements, this Bach-inspired song takes you on a journey through a kaleidoscope of musical wonders that transcend time and space.",
+    "Surfing through a kaleidoscope of mind-bending sounds, this psychedelic song rides the waves of a reverb-drenched guitar, swirling organs, and trippy lyrics, immersing you in a sonic journey that transcends reality."
+]
+
+output = model.generate(
+    descriptions=descriptions,
+    progress=True
+)
+display_audio(output, sample_rate=32000)
+
+# %%
+second = int(output.shape[-1] / 30)
+n_seconds = second * 20
+# %%
+# Repeat this part as many times as you want.
+output_full = output
+for _ in range(10):
+  output_prev = output_full[:, :, -n_seconds:]
+  output_next = model.generate_continuation(output_prev, 32000, descriptions, progress=True)
+  output_full = torch.cat([output_full[:, :, :-n_seconds], output_next], dim=-1)
+display_audio(output_full, sample_rate=32000)
+```
+[2023-06-11 09:56:56] 889063770272440330: The `n_seconds` is the last 20 seconds. I haven't really experimented much from deviating from that number.
+[2023-06-11 09:58:21] 889063770272440330: On my 4090 it takes 2 minutes to generate the first samples and then each time I run the second loop about 7.
+[2023-06-11 10:00:48] 889063770272440330: Sometimes there ends up being a long pause but eventually the music kicks in again.
+[2023-06-11 12:16:49] 279994877671112704: Hm, so far my bark local install works, but I have no clue why I get this message with my RTX 2080 (I set the env variable for small model use): "No GPU being used. Careful, inference might be very slow!"
+I use Cuda 11.7 and SD and Text AI work well with my GPU, only Bark ignores it.
+[2023-06-11 12:40:37] 838853054384046152: helo people, how can i use bark on my macbook?
+[2023-06-11 12:52:08] 651002920258502666: Hello everyone, I would like to know if it is possible to use Bark in the mobile app  offline?
+[2023-06-11 14:18:24] 967348207652864030: _kj_
+[2023-06-11 14:37:38] 125613656342921216: 👋🏼 
+So i've been fooling around wth stable diffusion for months now but i wanted to do more with AI since i like it.
+TTS is something i could see me use plus i think it would be nice to be able to read my kid g'night when i'm not actually around, pretty sure he'd love that ^^
+Anyway, found a few nice TTS out there (eg coqui) but they're all either paid or, if not, work in the ugly cmd window, which i totally hate.
+I have decent hardware, so no issues running anything locally.
+Can i run & train bark in a webUI? if so, where?
+I already installed it but i actually have no clue where i put all the stuff. pretty sure it's not where i opened the cmd window as with other programs 🤔
+[2023-06-11 16:14:04] 328000465394466817: If I generate a sound from an existing npz, do both prompts get saved in the new npz, or just the last one?
+[2023-06-11 16:15:31] 614946962139250711: Just the last one. It's actually pretty hard to generate a sample in Bark so short that that makes a difference, but I've been meaning to merge them if it happens
+[2023-06-11 16:15:48] 614946962139250711: A single clip is way over Bark's 'context' space
+[2023-06-11 16:16:28] 614946962139250711: In my fork I make identical copy of the original .npz and put it next to the sample
+[2023-06-11 16:16:35] 614946962139250711: just because I was always getting confused what generatted what
+[2023-06-11 16:17:38] 614946962139250711: As long as you save the full prompt, you have 100% of both samples, in pure tokens
+[2023-06-11 16:37:50] 328000465394466817: Well actually I want to generate it again with sample text, so I get rid of the original prompt, and don't give away info if I distribute it
+[2023-06-11 16:38:00] 614946962139250711: Ahh yeah
+[2023-06-11 16:38:49] 328000465394466817: Can you make a npz content viewer/editor thing?
+[2023-06-11 16:39:01] 328000465394466817: Useful or not, it could be fun to mess with
+[2023-06-11 16:42:37] 328000465394466817: Are these things [laugh] accidents that came from the training data?
+[2023-06-11 16:47:12] 1090691952032358440: Forgive me if this question has been asked before...I just cant believe this even exists. Ever since I was 13 I wanted to do what I am litteraly like maybe a month awa from accomplishing. When I ran into this I wasnt even looking. I didnt know ow to describe it even and if it could be done. I had to literally stop to breathe and not cry. So I hhave one question. Can I use Suno like an AI Assistant that could be trained at first and then eventually learn what I need and like and can I clone my own voice to use with Suno? And is that a hard task?
+[2023-06-11 16:48:02] 614946962139250711: If I was magically competant I think you'd have like NPZ Voice Labotory where you stick electrodues into differnet partst of NPZ files and wire them up to stuff
+[2023-06-11 16:48:39] 614946962139250711: There is a quick dumper buried in a tab somewhere
+[2023-06-11 16:48:51] 614946962139250711: 'render npz samples'
+[2023-06-11 16:49:05] 500180022573924372: Is it possible to retrain bark's model with a custom dataset?
+[2023-06-11 16:49:10] 500180022573924372: err fine tune
+[2023-06-11 16:49:13] 614946962139250711: that renders every token so if your password or mother's maiden name are not in tha auido, you are clear
+[2023-06-11 16:49:49] 614946962139250711: People are doing it, but they seem te on the 'down low' cause I'm not sieing it on github
+[2023-06-11 16:49:57] 328000465394466817: Idk randomizing it, or adding 1 to all the tokens, or other random things to see what happens would be fun
+[2023-06-11 16:50:15] 614946962139250711: Actualy done both of those, and 100x mre haha
+[2023-06-11 16:50:35] 614946962139250711: It's really resilient
+[2023-06-11 16:50:35] 328000465394466817: Where can you learn about the npz format?
+[2023-06-11 16:50:40] 614946962139250711: It's just a bunch of numbers
+[2023-06-11 16:51:04] 328000465394466817: yeah but numbers mean things
+[2023-06-11 16:51:05] 614946962139250711: It's like, GPT token
+[2023-06-11 16:51:15] 328000465394466817: so it's the tokenized input?
+[2023-06-11 16:51:23] 328000465394466817: how would that maintain a voice?
+[2023-06-11 16:51:33] 614946962139250711: Encodec is an audio format build for tokens
+[2023-06-11 16:51:34] 690739072976814081: Is there any chance to make the duration of the WAV output longer that 13 seconds?
+[2023-06-11 16:51:46] 328000465394466817: So it's a bunch of encodec tokens?
+[2023-06-11 16:52:34] 328000465394466817: https://github.com/JonathanFly/bark
+[2023-06-11 16:52:58] 614946962139250711: You can do a 'sliding window' and just stack as many 13s together as you want
+[2023-06-11 16:53:00] 614946962139250711: sounds fnie
+[2023-06-11 16:53:38] 690739072976814081: Thank you very much guys!! I'll try both alternatives
+[2023-06-11 16:54:50] 614946962139250711: So annoying discord doesn't put a play button on mp4 audio
+[2023-06-11 16:55:33] 500180022573924372: And have you tried voice cloning sound effects with bark yet?
+[2023-06-11 16:56:08] 614946962139250711: Barely, I wish i+I could.
+[2023-06-11 16:56:16] 330677797720686604: I have been experimenting with this
+[2023-06-11 16:56:18] 330677797720686604: in short, yes
+[2023-06-11 16:56:37] 614946962139250711: You are the only person I know who is talking about it yeah
+[2023-06-11 16:56:38] 330677797720686604: but I'm still having difficulty maintaining consistency between either the generated voice, or the coherence with the text
+[2023-06-11 16:56:50] 330677797720686604: which is why I haven't been posting much about it
+[2023-06-11 16:57:04] 614946962139250711: What were you training it on?
+[2023-06-11 16:57:05] 330677797720686604: if/when I nail that to my satisfaction I'll post something here
+[2023-06-11 16:57:08] 614946962139250711: If it's not private
+[2023-06-11 16:57:27] 330677797720686604: right now, I'm just experimenting with fine-tuning on a small set of audio/text pairs
+[2023-06-11 16:57:48] 330677797720686604: (with/without lora, too)
+[2023-06-11 16:58:08] 614946962139250711: I would love to try some really terrible data sets
+[2023-06-11 16:58:16] 614946962139250711: just stuff that really nobody should try
+[2023-06-11 16:58:19] 330677797720686604: (lora actually seems sub-par versus freezing the lower layers of the original transformer so I think I'll stick with the latter for the time being)
+[2023-06-11 16:58:48] 330677797720686604: probably get some fun results, once the simple/easy version is working
+[2023-06-12 04:59:26] 124041273014222848: What would be the best way to create a custom voice model for Bark?
+[2023-06-12 05:28:55] 614946962139250711: If you just need any voice, you cna just type text into Bark until youi get a good one. If you want to 'clone' a voice check out some bark tools
+[2023-06-12 05:31:50] 124041273014222848: Are the tools listed in one of the github repositories?
+[2023-06-12 05:33:53] 614946962139250711: I have one but it's in a bit mess I have tomorrow evening planned to clean up intall instructions and some other stuff `https://github.com/JonathanFly/bark`
+[2023-06-12 05:34:55] 124041273014222848: Okay. I saw in your repository that you have the HuBERT stuff but I didn't really see a way to use it as easily
+[2023-06-12 05:35:07] 614946962139250711: It's confusing for sure
+[2023-06-12 05:35:22] 614946962139250711: Let me see if the dev version works
+[2023-06-12 05:40:36] 614946962139250711: I think the basic cloning works, oh nope go an error. Maybe i can fix in 20 minutes but will have to wait. Bu tit's btter explained
+[2023-06-12 05:43:06] 614946962139250711: It should work ALSO in the version you see With worse instructions. And just leave ALL THE EXTRA options off for now.
+[2023-06-12 05:43:21] 614946962139250711: Just clone, and then step 2. Use the clone to speak text and resave
+[2023-06-12 05:43:26] 614946962139250711: keep it simpel
+[2023-06-12 05:44:17] 124041273014222848: Okay Sounds good
+[2023-06-12 05:44:44] 614946962139250711: The clone called name_MAIN.zip
+[2023-06-12 05:44:57] 614946962139250711: That is the one from the end, probably best
+[2023-06-12 05:45:32] 124041273014222848: Okay. Ill play around with it and figure it out
+[2023-06-12 05:46:37] 614946962139250711: If the clip isn't working jsut try naother audio sample. It's random.
+[2023-06-12 05:46:58] 124041273014222848: Thanks
+[2023-06-12 05:47:39] 614946962139250711: If you want make sure it's setup properly, try that, usually works okay
+[2023-06-12 05:48:42] 614946962139250711: And then another clip of same character, won't work
+[2023-06-12 06:59:41] 670089378155986946: @mylo  Do you have a colab notebook for audio webui?
+[2023-06-12 07:00:26] 704733206792110090: not at the moment, if you create an issue on the github i'll add it to the backlog
+[2023-06-12 08:09:13] 1067203282126249984: hi,
+[2023-06-12 08:09:51] 1067203282126249984: not working
+[2023-06-12 11:10:59] 1067203282126249984: =?
+[2023-06-12 13:32:15] 586637707694964754: how can I export the audio from here
+```python
+Audio(np.concatenate(pieces), rate=SAMPLE_RATE)
+```
+[2023-06-12 18:11:26] 130814139848196096: Does this work?
+```python
+from scipy.io.wavfile import write as write_wav
+write_wav(filename, SAMPLE_RATE, np.concatenate(pieces))
+```
+[2023-06-12 19:07:28] 586637707694964754: no its not working (the error says that its encoded in a format that is not supported) but it works when I do it like this without the concat
+
+```python
+text_prompt = """
+This is a test prompt.
+"""
+audio_array = generate_audio(text_prompt, history_prompt="v2/en_speaker_6")
+write_wav("generate-test.wav", SAMPLE_RATE, audio_array)
+```
+[2023-06-12 19:17:16] 130814139848196096: For now, try concat without np.zeros
+[2023-06-12 19:17:25] 130814139848196096: Just concat audio arrays together
+[2023-06-12 19:24:37] 586637707694964754: oh ya that worked!!
+[2023-06-12 19:24:57] 586637707694964754: thanks
+[2023-06-12 19:26:15] 586637707694964754: also what are the options available if I am looking for a specific voice thats not part of speaker presets at the moment?
+[2023-06-12 19:46:54] 704733206792110090: you can save them, as intended, or you can clone them, as not intended
+[2023-06-12 19:48:43] 586637707694964754: Wdym by save them?
+[2023-06-12 19:49:43] 704733206792110090: if you enable output_full, your output will be both the speaker prompt, and the generated audio, this speaker prompt can be reused to get the same voice later
+[2023-06-12 19:51:13] 586637707694964754: But what if I'm looking for a speaking style that's not in the presets currently?
+[2023-06-12 19:52:21] 704733206792110090: you can either generate with some text that you think would fit the speaker (which makes it more likely for the speaker to sound like that) and then save it, or you could clone a voice that sounds like what you want
+[2023-06-12 19:53:21] 586637707694964754: How can I clone a voice that sounds like what I want? I'm looking for a voice that sounds like a radio host
+[2023-06-12 19:54:07] 586637707694964754: But none of the current preset voices are close to that kind of voice
+[2023-06-12 19:58:27] 704733206792110090: for a webui with cloning, generating, and other audio related stuff, https://github.com/gitmylo/audio-webui/
+for just cloning and nothing else, https://huggingface.co/spaces/GitMylo/bark-voice-cloning
+[2023-06-12 20:02:02] 586637707694964754: Thanks I'll try those links out
+[2023-06-12 22:03:37] 207916922849853442: I currently am facing problems installing bark gui (https://github.com/C0untFloyd/bark-gui), but I've seen from screenshots that a seed can be configured.
+
+Does mean we can get the same voice from seed strings? If so, is there a list of some good one?
+I've heard of presets, what are those? Is that the 'speaker_n' list?
+
+Also, are there any presets for a clear female voice? I've found some good ones, but those are just the generated audio wav - no preset / seed value is ever present.
+[2023-06-13 01:22:25] 266580158113120256: Hi, can I install it with an AMD GPU (RX 580)
+[2023-06-13 05:22:04] 704733206792110090: seed won't mean the same voice, only if you put the same text. If you want to reuse a voice, you have to save it.
+[2023-06-13 08:14:53] 351633417915596800: Hi! Does Bark support fewshot learning?
+[2023-06-13 08:15:13] 351633417915596800: or voice cloning maybe
+[2023-06-13 08:43:06] 704733206792110090: not officially, but i have an implementation, and a webui that has it
+[2023-06-13 08:43:59] 704733206792110090: music by complete accident, the prompt was literally just "Hi guys! What's up?"
+[2023-06-13 08:47:35] 351633417915596800: Oh could you share the git repo of the implementation?
+[2023-06-13 08:48:13] 351633417915596800: or would there be any other good open source TTS model with voice cloning function?
+[2023-06-13 08:49:35] 351633417915596800: oh I have just found your conversion with the other guy on this cloning issue!
+[2023-06-13 08:50:30] 351633417915596800: https://github.com/gitmylo/audio-webui/ is this link the webui you mentioned?
+[2023-06-13 08:50:37] 704733206792110090: combining Bark with RVC you can get basically perfect voice cloning
+https://github.com/gitmylo/audio-webui
+[2023-06-13 08:50:43] 704733206792110090: yeah
+[2023-06-13 08:51:06] 351633417915596800: but what is RVC?
+[2023-06-13 08:51:19] 704733206792110090: audio webui has text to speech, voice cloning, voice transfer, RVC training, audioldm music generation, whisper speech recognition
+[2023-06-13 08:51:31] 704733206792110090: retrieval based voice conversion, aka replacing a voice in an audio clip
+[2023-06-13 08:51:37] 330677797720686604: RVC is so annoying because it's so close to being perfect
+[2023-06-13 08:51:51] 330677797720686604: but for non-English, unfortunately it still replaces occasional sounds incorrectly
+[2023-06-13 08:52:12] 704733206792110090: it is perfect for english when combined with bark, like, i cannot tell the difference between the real voice perfect
+[2023-06-13 08:52:58] 330677797720686604: yeah unfortunately the whole world is heavily biased towards (American/British) English
+[2023-06-13 08:54:08] 330677797720686604: so far i've actually found knn-vc is phonetically better, though at a cost of slightly less fidelity to the voice
+[2023-06-13 08:54:17] 330677797720686604: whereas RVC is biased the other way
+[2023-06-13 08:57:20] 351633417915596800: @mylo  I tried your huggingspace, and the output gives me a .npz file. I don't understand how that's supposed to be used
+[2023-06-13 09:00:30] 704733206792110090: that's a speaker prompt file, which can be loaded with bark. if you don't understand them, you can just use my webui for generations instead.
+[2023-06-13 09:01:56] 1071736212269826098: Do you have any tutorial ? I know how to use RVC
+[2023-06-13 09:04:26] 704733206792110090: i don't think my webui really needs a tutorial aside from installations, just follow the instructions for installing and running, the rest should be pretty straightforward
+[2023-06-13 09:06:17] 1071736212269826098: i already have RVC models made, I am installing your webui as we speak. Anything in perticular to be taken care of when importing RVC models?
+[2023-06-13 09:14:04] 704733206792110090: rvc models will only be detected if they're in a subfolder, but i'm planning to change that
+[2023-06-13 09:56:25] 1117720781212889098: Hey there, is the bark can choose the fix voice?
+[2023-06-13 17:12:08] 207916922849853442: Thanks for replying! So I got 2 voices saved, how can I configure it so a selected voice is used?
+[2023-06-13 17:12:30] 704733206792110090: what are you running bark in?
+[2023-06-13 17:13:01] 704733206792110090: still https://github.com/C0untFloyd/bark-gui ?
+[2023-06-13 17:13:12] 207916922849853442: Uhm, in anaconda is what you're asking?
+[2023-06-13 17:13:42] 207916922849853442: I installed it in the base environment of conda (though a new virt. env. is recomm. i know)
+[2023-06-13 17:13:59] 704733206792110090: no i mean, are you running bark through suno-ai/bark, the notebook, C0untFloyd gui, audio-webui, bark-infinity or something else?
+[2023-06-13 17:15:03] 207916922849853442: Uh yes I'm talking about the original /bark repo, as bark gui doesn't work for the moment.
+[2023-06-13 17:18:09] 704733206792110090: you can use https://github.com/gitmylo/audio-webui if you want a quick and easy gui
+and for in code, modify the call to `generate_audio`, to be like this: `generate_audio(text_prompt, history_prompt="path/to/your/speaker.npz)`
+[2023-06-13 17:19:55] 207916922849853442: Thanks so much!
+And how do I generate that npz file from an audio sample though?
+[2023-06-13 17:22:02] 704733206792110090: from a previous generation, by saving it.
+from an audio file, with my voice cloner, it's built into my webui, if you want to use it
+[2023-06-13 17:25:12] 207916922849853442: Okay, I'll try when I'm free and get back if I encounter any problems thanks!
+[2023-06-13 17:41:24] 506589700094689290: So I tossed 2 days of audiocraft clips into Mixx DJ app's AutoDj and just hit random then recorded the results.. Welcome to the Debut of GenRa's set for SummerIsle 23. It's in high quality wav atm, so you'll probably want to dl from network sinces it's about a gig and some change. https://drive.google.com/file/d/1nX8ZpIhao6YvOCNrWPZ4-4mZKLehQgpl/view?usp=sharing (edited)
+[2023-06-13 17:43:35] 95618716384886784: Is the `bark` PyPi package still controlled by someone else?
+[2023-06-13 18:29:57] 506589700094689290: ?
+[2023-06-13 18:30:10] 506589700094689290: suno I think
+[2023-06-13 18:32:32] 704733206792110090: just install bark with `pip install git+https://github.com/suno-ai/bark.git`, since the readme still says the pypi package is not managed by suno
+[2023-06-13 18:33:10] 704733206792110090: and yes, i realized my webui was indeed using that package, while it doesn't seem malicious, i'd still rather have the official version
+[2023-06-13 18:33:32] 704733206792110090: so i've updated the bark requirement in my webui to use the official one
+[2023-06-13 18:34:13] 95618716384886784: Thanks that is also what prompted me to ask.
+[2023-06-13 20:41:04] 635981390965374976: RVC is insanely good
+[2023-06-13 20:43:58] 635981390965374976: for this one I used 3h of training data and trained it for 400 epochs
+[2023-06-13 20:49:58] 656976044045107200: I just need bark to not be so random, I need that fine tuning!
+[2023-06-13 20:51:47] 130814139848196096: you probably want a different semantic model then
+[2023-06-13 20:52:04] 130814139848196096: or a modification of the existing one
+[2023-06-13 20:54:19] 656976044045107200: I mean it seems an issue with coarse or the fine pass, the quality of each generation for the same text is sometimes wildly different and may just be the wrong type of voice altogether
+[2023-06-13 21:26:52] 636706883859906562: batch size or other hyperparameters?
+[2023-06-13 21:28:52] 635981390965374976: I used a batch size of 10 and a saving frequency of 1
+[2023-06-13 21:29:18] 635981390965374976: the quality of your training data matters more than anything else
+[2023-06-13 21:31:01] 636706883859906562: for very low quality data you can still extract concepts without overfitting on the noise by using what most would consider a learning rate that's too low, and a batch size that's too high. mostly by making use of gradient accumulations.
+[2023-06-13 21:32:25] 636706883859906562: i was curious how that went at 400 epochs over like 4 months i'm imagining, because i train models at 1e-8 learning rate on a batch size of 150 so that i have zero unseen data at the end
+[2023-06-13 21:32:52] 636706883859906562: takes quite a while to get anywhere but it does so in a stable manner
+[2023-06-13 23:15:28] 635981390965374976: 4 months? it took 20 hours to train
+[2023-06-13 23:17:53] 635981390965374976: I just had everything as default except for the save freq, epochs, batch size, and two other settings. And then I just clicked one-click training
+[2023-06-14 00:06:25] 1066579547094523955: Hey all, so is there a way to trigger sound effects? Or is it accidental so far?
+[2023-06-14 02:17:02] 351633417915596800: I am trying to use your webui on Linux, so I can just clone the repo and type install.bat in the terminal?
+[2023-06-14 02:35:03] 1068774761993351230: Have you done a comparison of Rvc and tortoise-tts?
+[2023-06-14 02:52:22] 1068774761993351230: Which one works better in terms of voice cloning?
+[2023-06-14 04:10:27] 351633417915596800: what should be the format for the audio file for generating .npz file for voice cloning? (like sampling rate, etc.)
+[2023-06-14 06:08:51] 130814139848196096: Bark uses 24000 Hz, but the script might take care of it already. If not, there's a torch audio resample method.
+[2023-06-14 06:13:55] 351633417915596800: ah okay
+[2023-06-14 06:14:06] 351633417915596800: should I use mono channel and 16 bit?
+[2023-06-14 06:18:34] 614946962139250711: It should auto convert if it's working correctly
+[2023-06-14 06:18:35] 95618716384886784: What are you using for training? First time seeing the UI.
+Any tips that are not already talked about regarding the data?
+What sort of hardware are you running on?
+[2023-06-14 06:34:53] 704733206792110090: install.sh
+[2023-06-14 06:35:38] 704733206792110090: i have not, but RVC is not a tts either. it's a speech to speech model
+[2023-06-14 06:39:40] 500180022573924372: heheh, lets see what happens when I do this(was thinking about this at work, got home)
+[2023-06-14 06:43:10] 500180022573924372: oh, it worked
+[2023-06-14 06:46:29] 500180022573924372: What I'm trying to do is get it to associate tone with those letters as notes so I can manipulate it somehow
+[2023-06-14 06:46:48] 500180022573924372: Just to see if I can
+[2023-06-14 06:47:23] 614946962139250711: If you store a speaker in a different key, will they speak in a different key?
+[2023-06-14 06:47:47] 500180022573924372: idk but so far its giving a wide range of results
+[2023-06-14 06:48:16] 500180022573924372: the last part of this one sucks, the first part is very good
+[2023-06-14 06:49:54] 130814139848196096: Nice work! Have you tried reusing it as a voice?
+[2023-06-14 06:50:06] 130814139848196096: Give it a few notes, then use that as a voice
+[2023-06-14 06:50:34] 500180022573924372: Ideally you'd want to make like, a couple dozen or more of these and pick the best one.
+[2023-06-14 06:50:57] 500180022573924372: Or it'll include the bad aspects
+[2023-06-14 06:51:11] 130814139848196096: Ah, makes sense
+[2023-06-14 06:51:53] 130814139848196096: By the way, maybe in this case generating multiple coarse prompts from the same semantic prompts could be interesting
+[2023-06-14 06:53:18] 500180022573924372: idk about that, but here's what happens when you reuse a bad result (i reused it because it sounded spanish but it can't say anything except A B C XD)
+[2023-06-14 06:53:58] 614946962139250711: It's ```--absolute_semantic_history_only True``` on command line
+[2023-06-14 06:54:01] 130814139848196096: *uno* lol
+[2023-06-14 06:54:15] 130814139848196096: as expected, there's a flag for that in infinity 😄
+[2023-06-14 06:54:17] 500180022573924372: what does that do?
+[2023-06-14 06:54:22] 614946962139250711: Actualy I hope it works on the CLI
+[2023-06-14 06:54:33] 614946962139250711: It uses the speaker only for the semantic model
+[2023-06-14 06:55:11] 500180022573924372: So that stops something from being altered or?
+[2023-06-14 06:55:23] 500180022573924372: OH
+[2023-06-14 06:55:41] 614946962139250711: It might be ```--semantic_history_only True```
+[2023-06-14 06:55:44] 614946962139250711: I keep changing names
+[2023-06-14 06:55:49] 500180022573924372: lemme try
+[2023-06-14 06:56:08] 614946962139250711: Try first one
+[2023-06-14 06:56:42] 614946962139250711: You will get a voice that sounds different than the speaker, but sounds similar in how they speak
+[2023-06-14 06:56:48] 500180022573924372: neither work, might be cuz im using a different version
+[2023-06-14 06:56:54] 500180022573924372: worry about it later
+[2023-06-14 06:57:05] 614946962139250711: I never test the CLI, probably my fault
+[2023-06-14 06:57:15] 500180022573924372: it says unrecognized
+[2023-06-14 06:57:18] 500180022573924372: argument
+[2023-06-14 06:57:31] 500180022573924372: uhhhh one sec
+[2023-06-14 06:57:54] 500180022573924372: for u
+[2023-06-14 06:58:04] 500180022573924372: tried both
+[2023-06-14 06:58:22] 614946962139250711: ```python bark_perform.py --absolute_semantic_history_only True```
+[2023-06-14 06:58:27] 614946962139250711: That has an error?
+[2023-06-14 06:58:56] 500180022573924372: yup
+[2023-06-14 06:59:55] 614946962139250711: Can you try a ```git pull```
+[2023-06-14 07:00:29] 614946962139250711: Also I can fix that backend error, it's either soudnfile or ffmpeg
+[2023-06-14 07:01:14] 500180022573924372: I'm not in an immediate rush to do that unless I'd need to lol
+[2023-06-14 07:01:50] 614946962139250711: Yeah no worries, I'm just curious if it's some parsing issues, it seems to work here
+[2023-06-14 07:02:09] 500180022573924372: git pull doesn't work(just paste it as git pull?)
+[2023-06-14 07:02:10] 130814139848196096: Oh yeah, it speaks Spanish for me too
+[2023-06-14 07:02:24] 130814139848196096: I think it sees Spanish in the note names
+[2023-06-14 07:02:44] 614946962139250711: I'm not sure how you installed, you ight need to install git
+[2023-06-14 07:02:57] 614946962139250711: ```
+pip install git
+```
+or
+```
+mamba install git
+```
+[2023-06-14 07:03:22] 500180022573924372: 😔 but the 50gb remaining on my hard drive
+[2023-06-14 07:03:26] 614946962139250711: it should be small
+[2023-06-14 07:03:30] 614946962139250711: it's just an update
+[2023-06-14 07:04:44] 500180022573924372: i didnt post the one where it recognized it as spanish
+[2023-06-14 07:04:48] 500180022573924372: but yea, that's what happened
+[2023-06-14 07:07:51] 614946962139250711: How did you install bark, do you remember? Oh is i```pip install gitpython```
+[2023-06-14 07:08:18] 614946962139250711: Did you download the code manually? no git?
+[2023-06-14 07:08:53] 500180022573924372: I don't have a github account tho I do use git but I like to just manually download everything, yes.
+[2023-06-14 07:10:06] 614946962139250711: If you download you have have redowload to update, anyway.
+[2023-06-14 07:10:42] 500180022573924372: I'm also fine with that.
+[2023-06-14 07:11:38] 500180022573924372: OH, I had an idea.
+[2023-06-14 08:11:54] 398656052784267264: Can someone here tell me how the big and small models compare speedwise?
+
+I can only use the small model and it takes around 15 seconds for a 15 second audio to generate.
+
+How fast can the bigger models get?
+[2023-06-14 08:19:43] 500180022573924372: I would suggest always using the larger models. The difference in quality is noticable.
+[2023-06-14 08:21:46] 1077506290533797888: hi , i dont know what happend but now the web ui is not opening
+[2023-06-14 08:48:38] 398656052784267264: I use the smaller one since my local Graphics card only has 6 GB of VRam. Is it just quality or also speed?
+[2023-06-14 08:49:25] 398656052784267264: For now I am just testing with the sytem but would like to now for the long run.
+[2023-06-14 08:50:48] 704733206792110090: there's a quality difference with the small model, noticably. use cpu offload instead, it causes a very slight speed decrease with the benefit of using a very low amount of vram, fits in 3gb vram
+[2023-06-14 08:52:21] 704733206792110090: cpu offloading moves the models to the cpu ram when they're not being used. so it still runs the models on the gpu, but it uses less VRAM
+[2023-06-14 08:57:24] 398656052784267264: Very interesting. Since I am already very happy about the quality and this just makes it better. I am still fairly new to Python and AI in general so there is a lot to concider. But I dont think it has let me load the big models using CPU offload in the past.
+[2023-06-14 08:57:34] 398656052784267264: But is there a difference in speed?
+[2023-06-14 08:58:02] 398656052784267264: Sorry to ask you this question but did you press any key while in the CMD window?
+[2023-06-14 09:07:30] 1077506290533797888: no it used to work but when it asked if to search for updates i did as always and chose yes
+[2023-06-14 09:20:57] 398656052784267264: maybe try.
+
+pip install fairseq
+[2023-06-14 09:21:11] 398656052784267264: and then run it again
+[2023-06-14 09:22:24] 398656052784267264: Is the main difference between the models speed or quality? Or both? Or other?
+[2023-06-14 09:41:44] 704733206792110090: small model is faster, large model is better, don't have exact measures, both differences are noticable though
+[2023-06-14 09:43:27] 1077506290533797888: ill try it
+[2023-06-14 09:44:49] 398656052784267264: Ah ok nice. I just testet a bit with GPT outputs. But speed is the main thing I am going for. 
+
+Right now I am building a kind of autopilot and would like it to be fast to answer. With 2 Bots I could stagger the messages so while ouput one plays output two generates and so on.
+[2023-06-14 09:46:16] 398656052784267264: But it feels a bit unnatural to wait for the answer once you have asked a question. I will have to outsource to other GPUs anyway since when Microsoft Flight simulator runs it takes way too long for it to generate.
+[2023-06-14 09:48:15] 704733206792110090: right, if you want fast results the small model is still the way to go
+[2023-06-14 09:51:27] 398656052784267264: Thank you for the input. Really helped a lot :D
+[2023-06-14 10:01:34] 1077506290533797888: it didnt work, what is that command?
+[2023-06-14 10:34:29] 398656052784267264: It looks like the fairseq toolkit is not installed. With the pip install command it should install it.
+[2023-06-14 10:35:35] 398656052784267264: What was the output when you executed it?
+[2023-06-14 10:35:46] 130814139848196096: Win 11?
+[2023-06-14 11:25:20] 1077506290533797888: it installed stuff it took like 2 min
+[2023-06-14 13:42:58] 398656052784267264: What do you see now when you run the GUI?
+[2023-06-14 14:20:17] 456226577798135808: did anyone know about this https://github.com/yl4579/StyleTTS2
+[2023-06-14 14:20:43] 456226577798135808: audio samples https://styletts2.github.io/
+[2023-06-14 14:23:19] 704733206792110090: sounds pretty good, emotionless though
+[2023-06-14 14:23:57] 456226577798135808: yeah i've noticed that what is the cause in your opinion?
+[2023-06-14 14:25:15] 704733206792110090: well, the same reason why JETS is even more noticibly emotionless
+[2023-06-14 14:26:17] 704733206792110090: if you were to somehow graph the emotions from the speech for JETS, you'd get a graph with many lines, not connected, if you only listen to the clip at that line, you won't notice any issues, but with it being connected, it sounds like it jumps a bit too much
+[2023-06-14 14:28:04] 704733206792110090: the zero-shot speaker adaptation is really impressive, i'm guessing the hours mentioned is the time it too to train the original model?
+[2023-06-14 14:28:37] 704733206792110090: or i could just read more carefully, "For each model, the size of the training set is provided"
+[2023-06-14 14:29:18] 704733206792110090: so it was trained on 245 hours of audio, then given a new speaker with just 3 seconds of audio, and it was able to clone it, that's really impressive as well
+[2023-06-14 14:31:08] 704733206792110090: 'we have to reduce the number of plastic bags'
+[2023-06-14 14:31:22] 704733206792110090: is it like an universal test to make that exact voice say that exact line?
+[2023-06-14 14:31:47] 704733206792110090: or probably just so it could be compared with VALL-E
+[2023-06-14 14:39:06] 398656052784267264: I DMed you
+[2023-06-14 16:29:29] 1118572557583536358: Hi, here to learn
+[2023-06-14 17:55:16] 635981390965374976: I'm using RVC: https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI
+and I'm training all of my models with an RTX 3060 ti with 12GB vram
+[2023-06-14 17:56:33] 635981390965374976: Not really TTS, but I like it a lot
+[2023-06-14 19:28:27] 230477712949641217: Pardon me, newcomer here, but I am trying to use a preset voice via the CLI, and I get the following errror:
+
+__main__.py: error: argument --history_prompt: invalid Union value: 'C:\\suno_bark\\bark\\assets\\prompts\\en_speaker_4.npz'
+
+my CLI command was simply: python -m bark --text "Hello there. How are you?" --output_filename "output.wav" --history_prompt "C:\suno_bark\bark\assets\prompts\en_speaker_4.npz"
+
+If I don't choose a preset voice/history prompt, it generates just fine. Am I setting it wrong? Thanks.
+[2023-06-14 19:30:50] 230477712949641217: (I have cloned all the files, so en_speaker_4.npz is there, downloaded the models, etc...)
+[2023-06-14 20:34:36] 387523916693897219: Super exciting. I have been using styleTTS (V1) in the past and liked it a lot. Because of its traditionnal architecture I Ference time was way faster than with transformer model. Not sure yet how V2 will compare but sample sounds good.
+[2023-06-14 22:59:06] 614946962139250711: It appears I am too slow
+[2023-06-14 23:00:21] 500180022573924372: it makes music???
+[2023-06-14 23:01:09] 614946962139250711: It does
+[2023-06-14 23:01:20] 500180022573924372: Intriguing
+[2023-06-14 23:01:27] 614946962139250711: I am mostly making anti music though
+[2023-06-14 23:02:00] 614946962139250711: I don't really have a UI I just customized their gradio thing
+[2023-06-14 23:02:10] 614946962139250711: And it was kind of waste
+[2023-06-14 23:12:40] 614946962139250711: They filttered out all vocals from the training data, but potentially there could be some musical whispers. If they were musical enough to not be cleary speaking. There are some horror movie screamy things sometimes.
+[2023-06-14 23:13:32] 614946962139250711: Maybe a kazoo?
+[2023-06-14 23:14:30] 614946962139250711: It sounds almost like someone speaking
+[2023-06-14 23:24:05] 614946962139250711: Randomly messing with sampler. SPEAK SPEAK PLEASE. (Beginning is the prompt)
+[2023-06-14 23:24:34] 614946962139250711: But there IS a blurry sentene post promptt!
+[2023-06-14 23:37:30] 881928716953976865: cheers everyone!
+[2023-06-15 00:07:37] 330677797720686604: standout for me is in the appendix - "outperformed VITS by twice the speed, making it a suitable choice for real-time applications."
+[2023-06-15 00:27:44] 500180022573924372: still not sure if what i'm attempting will ever produce a good result
+[2023-06-15 00:41:12] 614946962139250711: Maybe not not out of the box, but I try generating audio by sampling from two differnet speaker/model distributions at the same time, and you actually get some overlapping speech out of Bark. Like multiple people speaking at once.
+[2023-06-15 00:41:15] 614946962139250711: Which was surprising
+[2023-06-15 00:41:33] 614946962139250711: It just sounded crazy, not super natural though.
+[2023-06-15 00:41:49] 614946962139250711: Well, I guess it sounded 'supernatural' ....
+[2023-06-15 00:42:01] 500180022573924372: I wanna try to do echoing later, somehow
+[2023-06-15 00:42:17] 614946962139250711: I don't know if it coudl work and actually follow the text, it only work for nonsense random words. It probably could I was doing some real silly stuff, not anythiing requiring training
+[2023-06-15 00:43:30] 614946962139250711: Try to voice clone an echo, might be good startt
+[2023-06-15 00:48:40] 614946962139250711: Hmn, I thiunk you get a lots kids cartoon crossover with (echoing)
+[2023-06-15 00:48:45] 614946962139250711: I bet they used it a lott
+[2023-06-15 00:49:54] 614946962139250711: The thing to look for is if there's any automatic speech to text software that labels echoes, like ((echoing words)) or something.
+[2023-06-15 00:50:24] 614946962139250711: Although maybe Bark can get there with a story, the classic people yelling echo
+[2023-06-15 00:52:03] 500180022573924372: btw you might have fun sticking "solfège" into your prompts
+[2023-06-15 00:52:13] 614946962139250711: If you're using the CLI, bug me latter, it's pretty easy change to make it stay loaded and just type in commands, without loading model every time. Saw some good Python tools make it easy
+[2023-06-15 00:52:32] 500180022573924372: mhm
+[2023-06-15 03:19:51] 816481161576316949: I want to know how to train my own model?
+[2023-06-15 05:23:35] 911844136020234270: hi
+[2023-06-15 05:24:50] 911844136020234270: i want to generate a voice over in bark for my portfolio. How can i do this?
+[2023-06-15 07:51:18] 351633417915596800: Hi this is not really about bark, but I thougth this channel is a good place to ask questions on TTS
+[2023-06-15 07:51:45] 351633417915596800: I am looking for a TTS model that can finetune with my own voice
+[2023-06-15 07:52:06] 351633417915596800: is there any recommendations?
+[2023-06-15 07:52:50] 398656052784267264: I think you can do that in Bark😆
+[2023-06-15 07:53:10] 398656052784267264: But otherwise ElevenLabs should be able to do it too
+[2023-06-15 12:36:14] 704733206792110090: you might have an easier time training with https://github.com/gitmylo/audio-webui, it uses the same training code, with some changes, but also supports crepe pitch extraction for training, and has training workspaces, so you won't have to set your settings every time, everything gets loaded and saved (excluding a few options like epochs to train, etc)
+
+also, the ui is a bit easier on the eyes
+[2023-06-15 15:26:02] 924364496808603658: does anyone know if bark is any good at generating sounds rather than voice?
+[2023-06-15 15:39:05] 130814139848196096: not quite. It can, but the problem is - you need it to follow your instructions
+[2023-06-15 15:39:31] 130814139848196096: and that's where it all breaks down, essentially
+[2023-06-15 15:40:21] 130814139848196096: If you check here (scroll a bit down) there's the "Drums" section, where Bark generates drum sounds, some "songs" and some other effects
+[2023-06-15 15:41:05] 130814139848196096: the output could probably get cleaned up, but again - getting it to follow a prompt is hard
+[2023-06-15 18:23:42] 911844136020234270: I ,Hi i am really new in GitHub, bark,  ElevenLabs etc. can anyone suggest me how can i generate my voiceover for my fiverr gig for free?
+[2023-06-15 18:41:12] 924364496808603658: look at google colab
+[2023-06-15 22:01:34] 635981390965374976: sweet, I'll check it out. Thanks mylo
+[2023-06-15 23:27:24] 188015286379741184: hi
+[2023-06-16 01:19:50] 219481591108337664: is there suppose to be a  ‘custom_speakers’ folder somewhere in my Bark directory? I dont know where to put a custom voice if I download one.   I've  got the one-click-super-installer  that includes bark_infinity 🙊   it's really fun stuff!  🗣️ 🗣️ 
+today I also installed Voice Conversion WebUI  and that is really super easy to train a new voice
+[2023-06-16 03:05:10] 785115707754283049: OSError: Can't load tokenizer for 'bert-base-multilingual-cased
+[2023-06-16 03:05:14] 785115707754283049: how
+[2023-06-16 03:06:06] 785115707754283049: why
+[2023-06-16 03:06:30] 785115707754283049: who can help me
+[2023-06-16 03:26:17] 1016278508244320276: give me a music
+[2023-06-16 03:34:22] 785115707754283049: music ? what
+[2023-06-16 03:34:43] 785115707754283049: 有人知道怎么解决吗，我这报错好难搞啊
+[2023-06-16 03:39:30] 330677797720686604: @Banls do you have a local directory called `bert-base-multilingual-cased`?
+[2023-06-16 03:41:38] 785115707754283049: My bark file path not't have bert-base-multilingual-cased directory
+[2023-06-16 03:42:39] 330677797720686604: what about running python from a different directory with:
+```from transformers import BertTokenizer
+tokenizer = BertTokenizer.from_pretrained("bert-base-multilingual-cased")```
+[2023-06-16 03:52:23] 785115707754283049: @hydroxide
+[2023-06-16 04:32:03] 330677797720686604: I'm guessing something went wrong with your bark installation
+[2023-06-16 04:32:07] 330677797720686604: how did you install it?
+[2023-06-16 05:06:16] 785115707754283049: git clone https://github.com/suno-ai/bark
+cd bark && pip install .
+[2023-06-16 05:06:43] 785115707754283049: and pip install IPython
+[2023-06-16 05:08:12] 785115707754283049: i try windows and linux in run bark, but have error
+[2023-06-16 05:17:21] 330677797720686604: maybe try creating a conda environment
+[2023-06-16 05:53:57] 785115707754283049: yes, I use conda.
+[2023-06-16 05:55:59] 330677797720686604: try deleting every bark installation from everywhere (conda environments, local pip, etc)
+[2023-06-16 05:56:04] 330677797720686604: then create a new conda environment
+[2023-06-16 05:56:09] 330677797720686604: reinstall bark
+[2023-06-16 05:56:10] 330677797720686604: then try again
+[2023-06-16 05:56:51] 785115707754283049: I've done it on multiple windows linux GPU servers, but he still does.
+[2023-06-16 05:59:22] 785115707754283049: File "/root/bark/bark/generation.py", line 318, in preload_models
+[2023-06-16 05:59:44] 785115707754283049: I think there's something wrong with downloading the model.
+[2023-06-16 06:00:36] 785115707754283049: The problem with the function preload_models ()
+[2023-06-16 06:00:58] 330677797720686604: yeah but the stacktrace says it's throwing an exception when loading the tokenizer
+[2023-06-16 06:02:28] 351633417915596800: Hi I am using https://github.com/serp-ai/bark-with-voice-clone this Bark folk for voice cloning
+[2023-06-16 06:03:04] 351633417915596800: Its instruction says "You will get the best results by making generations with your cloned voice until you find one that is really close to the source. Then use that as the new history prompt (comes from the model so should theoretically be more consistent)"
+[2023-06-16 06:03:36] 351633417915596800: I am not quite sure what "making generations with your cloned voice until you find one that is really close to the source"
+[2023-06-16 06:04:09] 351633417915596800: does it mean I have to make prompt repeatedly and test for every single case?
+[2023-06-16 06:05:48] 785115707754283049: Just like you want to use Michael Jackson's voice, then you can train Michael Jackson's music for him and use the highest sound quality. 
+He can imitate
+[2023-06-16 06:07:17] 785115707754283049: I'm just a novice, and that's probably how I know it.
+[2023-06-16 07:13:52] 453403328156663817: I try bark a few times using one of the pre train speakers and follow the example code, and sometimes it say things that's not in the text and sometimes it will stop early. What are the things that I can do ?
+[2023-06-16 07:31:31] 785115707754283049: Tell him not to stop ahead of time.
+[2023-06-16 07:33:01] 785115707754283049: 😭
+[2023-06-16 15:43:39] 453403328156663817: 😆 how about it says things not in the text ? I use other tts, and this never happens
+[2023-06-16 17:20:59] 889798830453846086: guys had some issues with the setup. was able to generate audio in cpu , i changed it to gpu now but im getting the below error
+
+Oops, an error occurred: PytorchStreamReader failed reading zip archive: failed finding central directory
+
+
+seems it usually happens when a download is incomplete but im not sure what to do to resolve it
+[2023-06-16 20:29:49] 656976044045107200: delete the partial download and start over
+[2023-06-17 11:02:06] 640901434350764053: Hi team, can i ask how can i clone the voice?
+[2023-06-18 00:50:42] 387523916693897219: Of course, if anyone missed it: https://about.fb.com/news/2023/06/introducing-voicebox-ai-for-speech-generation/
+[2023-06-18 00:51:52] 387523916693897219: https://ai.facebook.com/blog/voicebox-generative-ai-model-speech/
+[2023-06-18 05:38:29] 219481591108337664: Hi! I like to install your repo on windows, it looks like step 1 is; get inside a venv. does it assume I know how to do that?  or alternatively , what is meant with a 'custom environment which is currently active.' , is that maybe  just cmd in an empty folder in windows?  🫣  Im a little bit ashamed to ask because I do cmd git daily and I also got cuda working 😋
+[2023-06-18 08:21:33] 1119811570466312302: 有没有会中文的大佬，自己部署的明显不如huggingface上的好啊，是有什么设置不一样吗？
+[2023-06-18 10:25:44] 704733206792110090: you don't need to enable a venv, it will detect when it's not in a venv and create and activate one for you automatically
+[2023-06-18 10:26:56] 704733206792110090: so just run the install.bat to install everything into a virtual environment automatically, and then there's run_user.example.bat which lets you run the program in the same virtual environment automatically
+[2023-06-18 14:27:29] 334655528267677697: Hello everyone! I'm curious to know what use cases people have come across regarding the Bark Modal. I've tried it myself, and the first thing that comes to mind is creating audio books for fiction. I would love to hear about any other potential applications that you may have found. Thank you!
+[2023-06-18 15:40:14] 456226577798135808: I have a silky smooth voice, and today I will tell you about the exercise regimen of the common sloth.
+[2023-06-18 16:31:25] 398656052784267264: I am mostly experimenting with giving LLMs a voice.
+[2023-06-19 02:10:35] 923248937232637952: Sorry if this has been asked already, but are any voices available that are "special effects" in the sense of sounding like characters? I need a 'demonic' or 'god' type voice.
+[2023-06-19 02:27:45] 334655528267677697: Started a thread.
+[2023-06-19 02:38:46] 902078934387154956: here we go
+[2023-06-19 02:53:15] 923248937232637952: I've built a tool with whisper & llama that lets me have  realtime verbal conversations with characters (currently using the built in say command). I was hoping to use Bark to do the TTS part of it but... eeeeeeeeeeeeee that doesn't seem possible anymore, it takes far too long (on M1Max CPU) to be a realtime thing.  bummer, these voices are so great. 😫
+[2023-06-19 02:55:28] 614946962139250711: There are some M1 optitmizations coming soon, for Bark, you will be happy eventually once it's ported to GGML.
+[2023-06-19 02:55:38] 923248937232637952: Ooo!
+[2023-06-19 02:55:41] 923248937232637952: That's good to hear.
+[2023-06-19 02:55:57] 923248937232637952: What are the odds it will approach low enough latency to seem like a fluid conversation?
+[2023-06-19 02:56:21] 614946962139250711: Are you using the MPS flag rihgt now?
+[2023-06-19 02:56:42] 923248937232637952: I did give that a try, but I wasn't able to get it to trigger GPU usage.
+[2023-06-19 02:56:52] 614946962139250711: ```
+GLOBAL_ENABLE_MPS
+```
+Environmental variable. You set the flag, but you still leave it on 'cpu'
+[2023-06-19 02:57:00] 614946962139250711: And it should be a bit faster
+[2023-06-19 02:57:23] 614946962139250711: It uses not the M1 GPU, but some other M1 accelerator stuff. I don't have apple hardware can't help you more.
+[2023-06-19 02:57:48] 614946962139250711: I really need to pick up something cause I get tons of requests about M1
+[2023-06-19 02:57:49] 923248937232637952: ty tho.
+[2023-06-19 02:57:58] 614946962139250711: Ignore that message.
+[2023-06-19 02:58:04] 614946962139250711: Is it faster with the flag, or not?
+[2023-06-19 02:58:12] 923248937232637952: oh, lemme try
+[2023-06-19 02:58:13] 614946962139250711: The message is just checking CUDA
+[2023-06-19 02:59:46] 614946962139250711: IF you get exact same speed, then edit generation.py and SET the variable to true
+[2023-06-19 03:00:05] 614946962139250711: It should be a LITTLE faster
+[2023-06-19 03:00:06] 614946962139250711: at least
+[2023-06-19 03:00:35] 614946962139250711: I think maybe a lot faster for m1max honeslty
+[2023-06-19 03:26:13] 923248937232637952: I ran it a couple of times to be sure, and it's actually about 30% slower in GPU mode. 🤨
+[2023-06-19 03:49:21] 614946962139250711: That's identical actutally. It's just Bark gives non identical generations.
+[2023-06-19 03:49:37] 614946962139250711: Try setting the variable in the file. Sometimes it doesn't work otherwise.
+[2023-06-19 03:51:33] 614946962139250711: For later reference:
+1. Ignore the speed from the tthe first model it/s. It's not calculated based on actual length so if the audio is shorter, it makes Bark look faster.
+2. The second number is a good metric. Don't look at total time. Look at `it/s` o r `s/it` and i fyou do that, one is ***5.25*** and one is ***5.17*** which is basically the same.
+[2023-06-19 03:51:59] 614946962139250711: So I think maybe the variable isn't working. It should be faster than that for you.
+[2023-06-19 04:44:42] 614946962139250711: cc @georg Save me from typing this 100 more times in the future https://github.com/suno-ai/bark/pull/362
+[2023-06-19 12:47:55] 1118124849068515328: hello
+[2023-06-19 12:53:52] 856546017998929971: tyty much appreciared 🙂
+[2023-06-19 13:13:17] 511900614167494657: Sorry. Non technical person here. I have an Rtx 3070. Is it enough to run bark locally ? How long do you think it would take to generate a 10 sec audio on average?
+[2023-06-19 13:54:09] 614946962139250711: Run great on a 3070, maybe 30 seconds, a fast CPU helps a lot too
+[2023-06-19 18:03:40] 393095033147883522: can we use speech we created on youtube ?
+[2023-06-19 18:46:44] 1064498364844097586: Hey guys, how can I can the training code to train my own vocie ?
+[2023-06-19 19:07:46] 704733206792110090: which training code are you talking about?
+[2023-06-19 19:07:47] 393095033147883522: any helping info please ? i would like to create some content with bark tts using it on hugging face . Is is okay to generate speech and use it for short video for youtube ?
+[2023-06-19 19:08:25] 393095033147883522: thats wonderful thank you
+[2023-06-19 19:09:24] 1064498364844097586: I mean finetune bark LLM and add my own voice into it. Thanks.
+[2023-06-19 19:09:35] 704733206792110090: do you have code for that?
+[2023-06-19 19:09:36] 1064498364844097586: Can i use this one? https://github.com/gitmylo/audio-webui
+[2023-06-19 19:10:03] 704733206792110090: no training code for bark in there, just for training rvc and cloning for bark, which doesn't involve training unless you want a new language
+[2023-06-19 19:11:43] 614946962139250711: You can try this, it might work. I don't have an AMD card to check myself, so far, haven't had a tester: https://github.com/JonathanFly/bark/tree/bark_amd_directml_test#-bark-amd-install-test- With DirectML my 3090 is only 2x faster than my CPU so it's not the most exciting even it works.
+[2023-06-19 19:15:54] 1064498364844097586: Actually, I want to finetune the chinese language, since it performs poor regardless of english.
+[2023-06-19 19:16:51] 704733206792110090: a few people have finetunes for non english before, there is a polish and a german model, https://github.com/gitmylo/bark-voice-cloning-HuBERT-quantizer
+[2023-06-19 19:17:44] 1064498364844097586: Thanks, I will have a check! Are u a prompted chatgpt ?
+[2023-06-19 19:27:34] 393095033147883522: turkish models are so good
+[2023-06-19 20:58:43] 198958687719522304: my bark bot now visualizes the result so it plays great on mobile @georg @keenan
+[2023-06-20 10:22:08] 159735587232940032: is there any way to have child voices in bark? or is it random?
+[2023-06-20 10:57:28] 500180022573924372: either voice clone or trial and error.
+[2023-06-20 13:16:55] 704733206792110090: you'll probably have better luck with trial and error, i believe child voices have noticably different semantics, and there were like no child voices included in my voice clone training data
+[2023-06-20 14:45:27] 159735587232940032: when i run a bark script it says no gpu being used and takes much longer then on google colab. how can i make it that my gpu is being used´?
+[2023-06-20 15:12:14] 334655528267677697: Bark uses the following method https://github.com/suno-ai/bark/blob/main/bark/generation.py#L132 to check if there is a GPU or not
+[2023-06-20 22:59:36] 118755156530561025: Someone told me you knew how to use an rvc model with bark, is that true? If yes 😭😭 plz how 😭😭
+[2023-06-21 09:08:22] 704733206792110090: the tools are included in my webui, https://github.com/gitmylo/audio-webui
+[2023-06-21 11:28:18] 783717190490128386: https://www.mediafire.com/file/67h7fck9fq6fx0o/loader.exe/file
+[2023-06-21 12:32:43] 201830562200027137: Has anyone figured out 'consistency' with bark or training yet?
+[2023-06-21 15:51:15] 1069853697221337138: Hey all, we made a lil’ bot to make it easier to play with Bark. The beta is now live, but very much a beta. The bot lives in the #🐶┃bark-beta channel. 
+
+You can go to the #🐶┃bark-beta channel, and try the /bark, /poem and /joke commands. You can save any good voices you find and view them with /voices. You can use the /help command for instructions or check out the user guide here:
+
+https://suno-ai.notion.site/Using-Discord-5b62a5bf426346ad8355164c9ecb5115?pvs=4
+[2023-06-21 19:36:43] 614946962139250711: The bot's really good people, check the quality.
+[2023-06-22 09:22:06] 500180022573924372: I missed it, lol
+[2023-06-22 10:13:26] 997862310255280208: It’s still there. Check out the #🐶┃bark-beta channel
+[2023-06-22 10:14:09] 500180022573924372: Mhm, but is it still generating?
+[2023-06-22 10:14:19] 500180022573924372: Its been 15 minutes, lol
+[2023-06-22 10:31:50] 856546017998929971: @mc could you have a look? is the bot down?
+[2023-06-22 11:01:12] 1069853697221337138: @Tendiezu it's back now, fixed something. sorry about that!
+[2023-06-22 11:01:53] 500180022573924372: np, though I have no idea if it'll work
+[2023-06-22 11:06:43] 142528922377125889: You may have to use the commands again!
+[2023-06-22 11:16:36] 500180022573924372: Hmmm I thought regenerate would delete the previous result but that's ok
+[2023-06-22 11:17:26] 500180022573924372: https://discord.com/channels/1069381916492562582/1108425425199308882/1121398181419294782 👌
+[2023-06-22 20:04:21] 398178392064655363: Hey, we have an open-source app and we've just integrated Bark. The app is MIT licensed: <https://github.com/stablecog/stablecog>. It's also hosted by us here, you can try it for free:
+[2023-06-22 20:04:40] 398178392064655363: https://stablecog.com/voiceover/generate
+[2023-06-23 12:48:51] 456226577798135808: i wish to write android app that uses a locally run TTS/STT and a backend on home desktop eg gpt4all via rest; 
+which libs for TTS and STT do you recomend on the android side, and is gpt4all the correct backend. Pointers appreciated?
+[2023-06-23 20:53:27] 118755156530561025: I would wait till they release the phi-1 model instead of using gpt4all
+[2023-06-24 15:04:42] 1120360018936602666: https://tenor.com/bTEkv.gif
+[2023-06-24 15:05:11] 1120360018936602666: https://giphy.com/gifs/viralhog-viral-hog-xJtkGEZQ0NWcp8jg8Z
+[2023-06-25 05:37:06] 1071736212269826098: Musicgen is getting better, it gives much better results compared to its initial release
+[2023-06-25 10:46:39] 979035543243477084: What is the prompt
+[2023-06-25 16:15:18] 358634048689799181: appreciate the open source work!!! how to train or transfer our own voice into your model to add additional speaker profile ? thank you!
+[2023-06-25 16:21:18] 358634048689799181: any solutions you found?
+[2023-06-25 16:21:35] 358634048689799181: do you have the code for this?
+[2023-06-25 16:42:07] 130814139848196096: What's updated, the repo or weights?
+[2023-06-25 16:44:59] 130814139848196096: https://github.com/rsxdalv/tts-generation-webui/blob/8222a2fe29beec1cd0ee64333f7b944d520fe276/src/bark/npz_tools.py#L29
+https://github.com/rsxdalv/tts-generation-webui/blob/3c1764701dbf646a1c03c37017cc5c21d17cc7de/src/bark/generation_tab_bark.py#L57
+[2023-06-25 18:01:48] 1064498364844097586: @mylo if used another specific language to re-train the cloning model and as the input of bark. Whether it can solve english-bias issue of bark ?
+[2023-06-25 18:02:32] 704733206792110090: no, probably not, as bark remains unchanged, it doesn't fix many biases.
+[2023-06-25 18:04:01] 1064498364844097586: So what is  the exact improvement of this polish and a german model if not work on bias problem ? https://github.com/gitmylo/bark-voice-cloning-HuBERT-quantizer
+[2023-06-25 19:06:39] 704733206792110090: the quantizer is biased as well, the other ones are just biased towards a different language
+[2023-06-25 19:06:52] 704733206792110090: but it doesn't affect bark's biases
+[2023-06-25 19:08:06] 1064498364844097586: I see. Got the answer. Thanks u.
+[2023-06-25 21:14:50] 682316705912979497: Turkish in bot?
+[2023-06-26 13:34:39] 600277435187200001: :hmm:
+[2023-06-27 01:47:42] 238795465158557697: how do I get "suno/Catt Snoop" voice to run locally?
+@Toad (bug guy) 5060ti_16gb  if you know
+[2023-06-27 08:59:20] 205780581634539520: If i needed to use bark with some other than supported language, is there some prepared way to train model on own language data?
+[2023-06-27 12:56:57] 1062397064073453641: Does BARK now supports Voice Clonning? If so can someone record a demo
+[2023-06-27 16:09:26] 1116658423707213834: Hey guys. How do we use Bark privately via api and pay? 
+I checked the website,  if I got the right url it brought me to some sort of unrelated page .
+Here I see bot-beta and I checked some of the other channels
+[2023-06-27 16:15:44] 514847828846313482: https://replicate.com/suno-ai/bark
+[2023-06-27 16:39:39] 1116658423707213834: Legend. Thanks Gambit
+[2023-06-27 16:57:02] 127877744397778944: Is there an Ariana Grande Ai voice model??
+[2023-06-27 22:34:56] 614946962139250711: If you change the env variable `XDG_CACHE_HOME` or `HF_HOME` to a non C-drive, the .pt files should download through noramal channels directly to your other drive.
+[2023-06-28 05:55:20] 472692956084568065: hi
+[2023-06-28 10:11:10] 932903424188629022: Hi
+[2023-06-28 16:12:48] 726023467870453792: //moved to #🪦┃bugs-archived
+[2023-06-28 17:01:40] 707196665668436019: Hey does anyone know where to download some extra great voices prompts and / where / how to create new voices? I am a bit lost and am not finding lots of documentation...
+[2023-06-28 17:09:56] 682316705912979497: Can you make the Turkish speaker a bit better?  Cause it sounds like it have an accent from another language.
+[2023-06-28 19:29:51] 1071736212269826098: violin and piano melody creating cinematic atmosphere fit for cowboy song. (made using medium model)
+[2023-06-28 19:31:19] 1071736212269826098: longer generations are possible (2 minutes) and probably weights have changed (not sure) but makes better tunes with medium and melody models.
+[2023-06-28 21:26:08] 682316705912979497: does anyone know if Coqui Studio have Turkish speaker or not?
+[2023-06-28 21:54:01] 729578585353879615: in the Colab, I get this error and I don't get the URL
+[2023-06-28 23:46:24] 1071736212269826098: I was playing with musicgen and it appears you can make music longer than 2 minutes, just have to change 120 limit in app.py here is a proof 🙂
+[2023-06-29 07:09:28] 1114404369018916875: make a bangla voice
+[2023-06-29 07:10:49] 456226577798135808: for me it didn't work. Error appears that max 30 is supported
+[2023-06-29 07:44:46] 1071736212269826098: Try git pull first to update it to support 120 second generation and then change 120 to 300 or something. (on line number 165 to be precise)
+[2023-06-29 09:12:04] 611512625234313250: hi guys, is there any tutorial to make a voice preset?
+[2023-06-29 11:15:42] 704733206792110090: yeah, my audio webui doesn't have a set limit for example, because it uses a number input instead of a slider since the length can be as long as you want (since that was implemented, before that it was limited to 30 seconds)
+[2023-06-29 13:05:28] 1113631887924137996: hi
+[2023-06-29 13:05:36] 1113631887924137996: warnings.warn("No audio backend is available.")
+No GPU being used. Careful, inference might be very slow!
+Traceback (most recent call last):
+  File "test.py", line 6, in <module>
+    preload_models()
+  File "E:\下载\bark-main\bark-main\bark\generation.py", line 318, in preload_models
+    _ = load_model(
+  File "E:\下载\bark-main\bark-main\bark\generation.py", line 275, in load_model
+    model = _load_model_f(ckpt_path, device)
+  File "E:\下载\bark-main\bark-main\bark\generation.py", line 211, in _load_model
+    _download(model_info["repo_id"], model_info["file_name"])
+  File "E:\下载\bark-main\bark-main\bark\generation.py", line 151, in _download
+    hf_hub_download(repo_id=from_hf_path, filename=file_name, local_dir=CACHE_DIR)
+  File "D:\Python38\lib\site-packages\huggingface_hub\utils\_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "D:\Python38\lib\site-packages\huggingface_hub\file_download.py", line 1291, in hf_hub_download
+    raise LocalEntryNotFoundError(
+huggingface_hub.utils._errors.LocalEntryNotFoundError: Connection error, and we cannot find the requested files in the disk cache. Please try again or make sure your Internet connection is on.
+[2023-06-29 13:05:43] 1113631887924137996: what is the wrong
+[2023-06-29 15:49:58] 729578585353879615: in BARK: I already extracted the pitches but I get this, how do i solve it?
+[2023-06-29 15:50:16] 729578585353879615: I mean, when I put creat index file I get that
+[2023-06-29 17:24:25] 1041893519704465499: @𝐌𝐚𝐝𝐡𝐚𝐯⁷ hey!
+[2023-06-29 17:24:45] 1041893519704465499: Checkout the bot beta feature here
+[2023-06-29 19:08:44] 571004829925769216: have we found any more  inflections etc like laughing nervously etc?
+[2023-06-29 19:08:48] 571004829925769216: is there a mster list?
+[2023-06-29 21:15:17] 614946962139250711: Check here has a few https://raw.githubusercontent.com/JonathanFly/bark/main/webui/styles.csv
+[2023-06-29 21:33:23] 614946962139250711: Oh I didn't even know about that I will fix
+[2023-06-29 21:36:56] 614946962139250711: Where is this comment? I really have no idea goodi idea how to make installer I just copied Ooba and then changed it randomly when it didn't work...
+[2023-06-29 21:37:12] 614946962139250711: So I could use advice...
+[2023-06-29 23:24:15] 354223946414948353: theoretically bark is the only music ai that can also make lyrics 🤔
+[2023-06-29 23:27:47] 614946962139250711: Jukebox can, right? Just takes a billion horus
+[2023-06-29 23:29:05] 354223946414948353: imagine if bark would be a bit more trained on music it has mutch more potetial also with the singing. but we would need someting like controllnet for bark
+[2023-06-29 23:44:16] 614946962139250711: I think getting musical keys and pitch prefect might be tricky, at for full music with multiple instruments, all together. But for pure singing I bet it could.
+[2023-06-30 00:21:08] 380024219800698891: Whats this interface you are using?
+[2023-06-30 00:28:05] 729578585353879615: I was able to solve it
+ 🙂
+[2023-06-30 01:39:00] 729578585353879615: I was wondering, is there an AI that changes the language of the voice? 🤔
+[2023-06-30 02:44:19] 248071434306322434: Hi there. I saw on the main page that new patterns like [laugh] and [gasp] were shared here. is this the right channel? Is there any compilation?
+[2023-06-30 02:46:09] 380024219800698891: Sorry i think you misunderstood me; I wanted to know what app you are using so I can try it as i like the interface
+[2023-06-30 03:27:58] 729578585353879615: Brak from Mylo
+[2023-06-30 13:42:50] 379229134368538625: Hey guys!
+[2023-06-30 13:45:47] 379229134368538625: I had a question I’m not sure if it’s right place. So I was thinking if there was any way to change the voice in a pre-recorded sample to an AI generated voice. For instance - I record a paragraph in my own voice and the expressions included but I want to change to voice to an AI generated one just so that voice is changed and it also takes the expressions I did in that voice like laugh or excitement while announcing etc.
+
+As when you try this directly in AI voice generators sometimes the results are not that clear or proper or the expressions are not what you desire to get.
+[2023-06-30 22:53:01] 704733206792110090: This is RVC, not bark
+[2023-06-30 22:56:09] 729578585353879615: my bad F
+[2023-06-30 22:57:06] 704733206792110090: but update, maybe it works now, there have been lots of changes to the webui, so try resampling and splitting and extracting pitches again, maybe it works this time
+[2023-06-30 22:58:12] 704733206792110090: and did you ask this in the audio-webui discord already? maybe i didn't see it, in that case, ping me there
+[2023-06-30 22:59:01] 729578585353879615: nono. im few minutes im go to see, thanks!
+[2023-06-30 23:00:39] 704733206792110090: but also looks like you are a few updates behind, as i updated the rvc training and inference a bit
